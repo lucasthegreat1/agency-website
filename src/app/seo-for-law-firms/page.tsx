@@ -30,13 +30,22 @@ const spec: UKIndustrySpec = {
     retainerItems: [
       'SRA-Compliant Legal Content Optimization',
       'Practice-Area & Local Landing Page SEO',
+      'Structured for AI search visibility (ChatGPT, Gemini, AI Overviews)',
       'Google Business Profile & Local Citation Audits',
       'LegalService & FAQPage JSON-LD Schema',
       'Technical Crawl & Mobile Speed Optimization',
       'Monthly Solicitor Enquiry & Lead Attribution',
     ],
   },
+  aiSearchSection: {
+    h2: 'Built for how people search now — including AI',
+    content: "More people ask ChatGPT or Google's AI Overview \"who's a good solicitor for commercial property\" before they ever open a search engine. We structure your content so it can be found and accurately cited by AI tools, not just ranked in traditional search — so you show up whichever way a potential client is looking.",
+  },
   faqs: [
+    {
+      q: 'Do you also help us show up in ChatGPT and AI search results?',
+      a: "Yes — this is now part of how we build your content. It's still an emerging area, so we're upfront that tracking and results here are less mature than traditional Google rankings, but it's built into everything we produce for you.",
+    },
     {
       q: 'How do you ensure SEO copy complies with SRA advertising rules?',
       a: 'We strictly adhere to SRA regulatory standards by focusing exclusively on firm experience, service clarity, practice area coverage, and search visibility—avoiding any outcome guarantees or comparative superlatives.',

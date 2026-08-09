@@ -30,13 +30,22 @@ const spec: UKIndustrySpec = {
     retainerItems: [
       'Geotargeted Service Area Landing Pages',
       'Google Maps Pack & Local GBP Optimization',
+      'Structured for AI search visibility (ChatGPT, Gemini, AI Overviews)',
       'Cost-Per-Lead Reduction Tracking',
       'HomeAndConstructionBusiness JSON-LD Schema',
       'Completed Project Gallery & Review SEO',
       'Monthly Quote Request & Call Attribution',
     ],
   },
+  aiSearchSection: {
+    h2: 'Built for how people search now — including AI',
+    content: 'Homeowners are starting to ask AI tools things like "how much does a roof replacement cost" or "find me a good roofer near Manchester" instead of typing it into Google. We build your content so it\'s structured for these AI answers too — not just traditional search rankings.',
+  },
   faqs: [
+    {
+      q: 'Do you help with AI search, not just Google?',
+      a: "Yes — we build your pages so tools like ChatGPT and Google's AI Overview can pull accurate information about your services and pricing, alongside your normal SEO work.",
+    },
     {
       q: 'How does SEO reduce my cost-per-lead compared to Checkatrade or Google Ads?',
       a: 'PPC and lead directories charge £50 to £120+ for every shared lead. Organic SEO builds an asset owned by your firm, producing exclusive quote enquiries at a fraction of the cost per lead.',

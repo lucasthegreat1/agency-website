@@ -30,13 +30,22 @@ const spec: UKIndustrySpec = {
     retainerItems: [
       'Shopify Liquid Theme Code & Speed Audit',
       'Collection Tag URL Duplicate & Canonical Fixes',
+      'Structured for AI search visibility (ChatGPT, Gemini, AI Overviews)',
       'Automated SKU Product JSON-LD Schema Pipeline',
       'Shopify Plus Multi-Currency & Hreflang SEO',
       'Faceted Navigation Parameter Index Control',
       'Monthly Non-Brand Sales & Revenue Attribution',
     ],
   },
+  aiSearchSection: {
+    h2: 'Built for how people search now — including AI',
+    content: 'Shoppers increasingly ask AI tools things like "best coffee machine on Shopify" or "where can I buy artisan skincare in the UK" instead of browsing Google results. We fix the technical issues that block AI crawlers from reading your product and collection pages properly, so your store can actually be considered for these AI-driven recommendations.',
+  },
   faqs: [
+    {
+      q: 'Can AI shopping tools actually see my Shopify store properly?',
+      a: 'Often not, by default — duplicate collection pages, app bloat, and JavaScript-heavy themes can block AI crawlers from reading your store cleanly. Part of our audit checks specifically for this, alongside standard SEO issues.',
+    },
     {
       q: 'Why does Shopify create duplicate URLs for products?',
       a: 'Shopify defaults to linking products through collection handles (e.g., /collections/mens/products/shirt) as well as root product URLs (/products/shirt). We fix theme code to enforce primary canonical paths.',

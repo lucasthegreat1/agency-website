@@ -22,6 +22,10 @@ export type UKIndustrySpec = {
     retainerTitle: string;
     retainerItems: string[];
   };
+  aiSearchSection?: {
+    h2: string;
+    content: string;
+  };
   metaNotesNotice?: string;
   faqs: { q: string; a: string }[];
 };
@@ -188,11 +192,35 @@ export default function IndustryPageTemplate({ spec }: { spec: UKIndustrySpec })
         </div>
       </section>
 
+      {/* DEDICATED AI SEARCH / GEO H2 BLOCK (Between Retainer Scope & FAQ) */}
+      {spec.aiSearchSection && (
+        <section style={{ marginBottom: '6rem' }}>
+          <div className="container">
+            <div className="section-bar">
+              <span>(06) AI SEARCH & FORWARD-THINKING VISIBILITY</span>
+              <span>Modern Search Behaviour</span>
+            </div>
+
+            <div style={{ backgroundColor: '#f8f8f8', border: '1px solid #e5e5e5', borderRadius: '24px', padding: '3.5rem' }}>
+              <div className="soft-pill-tag" style={{ marginBottom: '1.2rem' }}>
+                AI Search Optimization
+              </div>
+              <h2 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#000000', letterSpacing: '-0.02em', marginBottom: '1.2rem' }}>
+                {spec.aiSearchSection.h2}
+              </h2>
+              <p style={{ color: '#444444', fontSize: '1.08rem', lineHeight: 1.7, maxWidth: '840px' }}>
+                {spec.aiSearchSection.content}
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* H2 OUTLINE SECTION 5: FAQS */}
       <section style={{ marginBottom: '6rem' }}>
         <div className="container">
           <div className="section-bar">
-            <span>(06) FREQUENTLY ASKED QUESTIONS</span>
+            <span>({spec.aiSearchSection ? '07' : '06'}) FREQUENTLY ASKED QUESTIONS</span>
             <span>Clear Answers</span>
           </div>
 

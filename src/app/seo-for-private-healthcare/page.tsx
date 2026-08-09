@@ -30,13 +30,22 @@ const spec: UKIndustrySpec = {
     retainerItems: [
       'CQC-Compliant Medical Treatment Copy',
       'Local & Clinic Location SEO Optimisation',
+      'Structured for AI search visibility (ChatGPT, Gemini, AI Overviews)',
       'Consultant Profile & Specialism Schema',
       'MedicalBusiness & FAQPage JSON-LD Graph',
       'Patient Consultation Conversion Optimisation',
       'Monthly Appointment Booking Attribution',
     ],
   },
+  aiSearchSection: {
+    h2: 'Built for how people search now — including AI',
+    content: 'Patients increasingly ask AI tools questions like "best private dermatologist near me" or "how much does knee replacement cost" before they search Google directly. We write your content so it can be accurately quoted by these tools — helping patients find and trust you earlier in their research.',
+  },
   faqs: [
+    {
+      q: 'Will this help us show up when people ask ChatGPT for a recommendation?',
+      a: "It's designed to. We structure your treatment and pricing information so AI tools can extract and cite it accurately — it's a newer channel, so we treat it as an added layer on top of your core SEO, not a replacement for it.",
+    },
     {
       q: 'How do you maintain CQC compliance in healthcare SEO copy?',
       a: 'We adhere to CQC advertising principles by providing factual, patient-focused descriptions of procedures, clinic facilities, and consultant qualifications without clinical outcome claims.',

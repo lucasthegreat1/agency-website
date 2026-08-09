@@ -30,13 +30,22 @@ const spec: UKIndustrySpec = {
     retainerItems: [
       'Technical Specification & Part Number SEO',
       'Programmatic Industrial Catalog Structuring',
+      'Structured for AI search visibility (ChatGPT, Gemini, AI Overviews)',
       'CAD Data Sheet & Spec Sheet Schema Markup',
       'B2B Procurement RFQ Conversion Optimisation',
       'Technical ISO/DIN Standard Topical Clusters',
       'Monthly RFQ & B2B Supply Lead Attribution',
     ],
   },
+  aiSearchSection: {
+    h2: 'Built for how people search now — including AI',
+    content: 'Engineers and procurement teams increasingly use AI tools to shortlist suppliers before contacting anyone — often before a human ever visits your website. We structure your technical and spec-driven content so it can be accurately surfaced and cited by these tools, helping you get on the shortlist earlier in the buying process.',
+  },
   faqs: [
+    {
+      q: 'Can AI tools actually find technical/spec information about us?',
+      a: "Only if it's structured properly — which is part of what we do. We make sure your specifications, certifications and capabilities are written in a way AI systems can extract and cite accurately, not buried in PDFs or images.",
+    },
     {
       q: 'Why is technical spec search behavior different for B2B industrial buyers?',
       a: 'Engineers and procurement teams search by exact tolerances, ISO/BS material codes, and CAD part numbers. Generic consumer SEO fails to capture these high-value spec searches.',

@@ -12,11 +12,12 @@ export default function IndustriesOverviewPage() {
     { name: 'Home Improvement', path: '/seo-for-home-improvement', num: '[03]', desc: 'Cut cost per lead vs £50+ PPC/Checkatrade ads for roofers, builders & contractors.' },
     { name: 'Industrial & B2B Manufacturing', path: '/seo-for-industrial-b2b', num: '[04]', desc: 'Spec-driven SEO targeting procurement teams and design engineers searching exact DIN/ISO specs.' },
     { name: 'Private Schools & Education', path: '/seo-for-private-schools-education', num: '[05]', desc: 'Long-lead enrolment runway SEO engaging parents early in their 12-month research journey.' },
-    { name: 'Shopify Stores', path: '/seo-for-shopify-stores', num: '[06]', desc: 'Specialist Shopify technical SEO fixing hidden liquid code issues holding back your rankings.' },
+    { name: 'Shopify E-Commerce Stores', path: '/seo-for-shopify-stores', num: '[06]', desc: 'Specialist Shopify technical SEO fixing hidden liquid code issues holding back your rankings.' },
+    { name: 'Cybersecurity Firms', path: '/seo-for-cybersecurity', num: '[07]', desc: 'NIS2 compliance & technical SEO targeting CISOs and enterprise IT decision-makers.' },
   ];
 
   return (
-    <div style={{ backgroundColor: '#fcfcfc', minHeight: '100vh', paddingTop: '5rem', paddingBottom: '6rem' }}>
+    <div style={{ backgroundColor: '#ffffff', minHeight: '100vh', paddingTop: '5rem', paddingBottom: '6rem' }}>
       {/* Header */}
       <section style={{ marginBottom: '4rem' }}>
         <div className="container">
@@ -32,12 +33,12 @@ export default function IndustriesOverviewPage() {
         </div>
       </section>
 
-      {/* 6 Official UK Specialist Verticals */}
+      {/* Specialist Industry Verticals */}
       <section>
         <div className="container">
           <div className="section-bar">
             <span>(01) SELECT YOUR INDUSTRY</span>
-            <span>6 Dedicated UK Industry Pages</span>
+            <span>Dedicated Industry Pages</span>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1.5rem', marginBottom: '6rem' }}>
@@ -58,7 +59,7 @@ export default function IndustriesOverviewPage() {
                   </p>
                 </div>
 
-                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', fontWeight: 700, color: '#ff4500', textTransform: 'uppercase', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', fontWeight: 700, color: '#000000', textTransform: 'uppercase', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                   VIEW SPECIALIST PAGE <ArrowRight size={14} />
                 </div>
               </Link>

@@ -30,13 +30,22 @@ const spec: UKIndustrySpec = {
     retainerItems: [
       'Open Day & Campus Visit Landing Page SEO',
       'Parent Research Journey Content Hubs',
+      'Structured for AI search visibility (ChatGPT, Gemini, AI Overviews)',
       'Regional School Comparison & Guide SEO',
       'EducationalOrganization JSON-LD Schema',
       'ISI Inspection & Curriculum Authority Optimization',
       'Monthly Open Day & Prospectus Enquiries Attribution',
     ],
   },
+  aiSearchSection: {
+    h2: 'Built for how people search now — including AI',
+    content: 'Parents are starting to ask AI tools things like "best private schools in Surrey" or "is private school worth it after the fee changes" before they browse individual school websites. We make sure your school\'s information is structured so these tools can find and cite it accurately.',
+  },
   faqs: [
+    {
+      q: 'Will parents find us through ChatGPT, not just Google?',
+      a: "That's the goal. We write your admissions, fees, and open-day content so AI tools can extract accurate information about your school when parents ask — on top of the traditional SEO work.",
+    },
     {
       q: 'When should an independent school begin its enrolment SEO campaign?',
       a: 'Because parent buying decisions follow 12-month annual academic cycles, starting SEO 6 to 9 months prior to open day seasons ensures peak rankings when parent search volume spikes.',
