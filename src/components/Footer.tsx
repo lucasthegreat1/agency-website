@@ -21,9 +21,22 @@ export default function Footer() {
             <Link href="/" style={{ display: 'inline-block', marginBottom: '1.2rem' }}>
               <Logo color="#ffffff" height={36} />
             </Link>
-            <p style={{ color: '#888888', fontSize: '0.98rem', lineHeight: 1.65, maxWidth: '360px', marginBottom: '1.5rem' }}>
+            <p style={{ color: '#888888', fontSize: '0.98rem', lineHeight: 1.65, maxWidth: '360px', marginBottom: '1.2rem' }}>
               Specialist search & AI visibility agency helping UK brands convert organic searches into high-value clients and revenue.
             </p>
+            <a
+              href="mailto:info.xtractagency@gmail.com"
+              style={{
+                color: '#ffffff',
+                fontSize: '0.95rem',
+                fontWeight: 700,
+                textDecoration: 'underline',
+                display: 'inline-block',
+                marginBottom: '1.5rem',
+              }}
+            >
+              info.xtractagency@gmail.com
+            </a>
             <div style={{ fontSize: '0.85rem', color: '#666666', fontWeight: 700, letterSpacing: '0.05em' }}>
               LONDON • SAN FRANCISCO • MANCHESTER
             </div>

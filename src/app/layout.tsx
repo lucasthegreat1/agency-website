@@ -37,6 +37,7 @@ export default function RootLayout({
     name: 'SEO Agency',
     description: 'Enterprise Search Engine Optimization and Generative AI Search Visibility Agency.',
     url: 'https://seo.ai',
+    email: 'info.xtractagency@gmail.com',
     areaServed: 'Worldwide',
     knowsAbout: [
       'Search Engine Optimization',

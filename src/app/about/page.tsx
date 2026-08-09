@@ -40,9 +40,16 @@ export default function AboutPage() {
           <h1 style={{ fontSize: 'clamp(2.8rem, 5.5vw, 4.5rem)', fontWeight: 800, color: '#000000', letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: '1.5rem' }}>
             Engineering Search Authority for Category Kings.
           </h1>
-          <p style={{ fontSize: '1.2rem', color: '#666666', lineHeight: 1.6, maxWidth: '640px' }}>
-            XTRACT was founded on a singular premise: Search is no longer just a list of ten blue links. We help world-class companies command the AI answer engines of tomorrow.
+          <p style={{ fontSize: '1.2rem', color: '#666666', lineHeight: 1.6, maxWidth: '640px', marginBottom: '2rem' }}>
+            XTRACT was founded on a singular premise: Search is no longer just a list of ten blue links. We help world-class UK companies command search engine rankings and AI recommendations.
           </p>
+
+          <div style={{ backgroundColor: '#f8f8f8', border: '1px solid #e5e5e5', borderRadius: '16px', padding: '1.5rem 2rem', display: 'inline-flex', alignItems: 'center', gap: '1rem' }}>
+            <span style={{ fontWeight: 800, fontSize: '0.9rem', color: '#000000', textTransform: 'uppercase' }}>GET IN TOUCH:</span>
+            <a href="mailto:info.xtractagency@gmail.com" style={{ fontWeight: 800, fontSize: '1.05rem', color: '#000000', textDecoration: 'underline' }}>
+              info.xtractagency@gmail.com
+            </a>
+          </div>
         </div>
       </section>
 
