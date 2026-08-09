@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import AIAuditWidget from '@/components/AIAuditWidget';
+import SeoGeoProcessTimeline from '@/components/SeoGeoProcessTimeline';
 
 export type UKIndustrySpec = {
   tag: string;
@@ -123,11 +124,23 @@ export default function IndustryPageTemplate({ spec }: { spec: UKIndustrySpec })
         </div>
       </section>
 
+      {/* PROCESS GRAPH SECTION - SEO & GEO TIMELINE */}
+      <section style={{ marginBottom: '6rem' }}>
+        <div className="container">
+          <div className="section-bar">
+            <span>(03) OUR SEO & GEO EXECUTION PROCESS</span>
+            <span>Step-by-Step Methodology</span>
+          </div>
+
+          <SeoGeoProcessTimeline industryName={spec.tag} />
+        </div>
+      </section>
+
       {/* H2 OUTLINE SECTION 3: CASE STUDY */}
       <section style={{ marginBottom: '6rem' }}>
         <div className="container">
           <div className="section-bar">
-            <span>(03) PROVEN PROOF</span>
+            <span>(04) PROVEN PROOF</span>
             <span>Case Study & Outcomes</span>
           </div>
 
@@ -152,7 +165,7 @@ export default function IndustryPageTemplate({ spec }: { spec: UKIndustrySpec })
       <section style={{ marginBottom: '6rem' }}>
         <div className="container">
           <div className="section-bar">
-            <span>(04) RETAINER SCOPE</span>
+            <span>(05) RETAINER SCOPE</span>
             <span>What's Included</span>
           </div>
 
@@ -179,7 +192,7 @@ export default function IndustryPageTemplate({ spec }: { spec: UKIndustrySpec })
       <section style={{ marginBottom: '6rem' }}>
         <div className="container">
           <div className="section-bar">
-            <span>(05) FREQUENTLY ASKED QUESTIONS</span>
+            <span>(06) FREQUENTLY ASKED QUESTIONS</span>
             <span>Clear Answers</span>
           </div>
 
