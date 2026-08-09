@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from '@/components/Icons';
+import Logo from '@/components/Logo';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,25 +23,14 @@ export default function Navbar() {
         position: 'sticky',
         top: 0,
         zIndex: 50,
-        backgroundColor: 'rgba(255, 255, 255, 0.95)',
-        backdropFilter: 'blur(12px)',
+        backgroundColor: '#ffffff',
         borderBottom: '1px solid #e5e5e5',
       }}
     >
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '80px' }}>
-        {/* Solid Pure Black Xtract Logo */}
+        {/* Crisp Vector Pure Black Logo */}
         <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-          <img
-            src="/logo-black.png"
-            alt="Xtract Logo"
-            style={{
-              height: '34px',
-              width: 'auto',
-              objectFit: 'contain',
-              display: 'block',
-              filter: 'brightness(0)',
-            }}
-          />
+          <Logo color="#000000" height={34} />
         </Link>
 
         {/* Desktop Nav Links */}
@@ -53,10 +43,10 @@ export default function Navbar() {
                 href={item.href}
                 style={{
                   fontSize: '0.95rem',
-                  fontWeight: isActive ? 700 : 600,
+                  fontWeight: isActive ? 800 : 600,
                   color: '#000000',
                   transition: 'opacity 0.2s ease',
-                  opacity: isActive ? 1 : 0.6,
+                  opacity: isActive ? 1 : 0.7,
                   padding: '0.4rem 0',
                   position: 'relative',
                 }}
