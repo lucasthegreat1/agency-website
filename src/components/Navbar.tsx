@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from '@/components/Icons';
 
@@ -28,9 +29,13 @@ export default function Navbar() {
       }}
     >
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '80px' }}>
-        {/* Brand Logo */}
-        <Link href="/" style={{ fontSize: '1.5rem', fontWeight: 900, color: '#000000', letterSpacing: '-0.03em', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.2rem' }}>
-          SEO<span style={{ color: '#000000' }}>.AI</span>
+        {/* Official Black Brand Logo */}
+        <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+          <img
+            src="/logo-black.png"
+            alt="Xtract Logo"
+            style={{ height: '32px', width: 'auto', objectFit: 'contain', display: 'block' }}
+          />
         </Link>
 
         {/* Desktop Nav Links */}
