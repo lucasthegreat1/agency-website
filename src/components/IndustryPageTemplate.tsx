@@ -124,11 +124,11 @@ export default function IndustryPageTemplate({ spec }: { spec: UKIndustrySpec })
         </div>
       </section>
 
-      {/* PROCESS GRAPH SECTION - SEO & GEO TIMELINE */}
+      {/* PROCESS GRAPH SECTION - SEO TIMELINE */}
       <section style={{ marginBottom: '6rem' }}>
         <div className="container">
           <div className="section-bar">
-            <span>(03) OUR SEO & GEO EXECUTION PROCESS</span>
+            <span>(03) OUR SEO EXECUTION PROCESS</span>
             <span>Step-by-Step Methodology</span>
           </div>
 

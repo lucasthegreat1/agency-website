@@ -6,14 +6,14 @@ export default function SeoGeoProcessTimeline({ industryName }: { industryName?:
   const steps = [
     {
       num: '01',
-      title: 'CONDUCT KEYWORD & GEO RESEARCH',
+      title: 'CONDUCT KEYWORD RESEARCH',
       side: 'left',
       description:
-        `We begin by conducting detailed keyword research and generative AI prompt mapping tailored to ${industryName || 'your sector'}. Our team identifies high-intent searches prospective clients use on Google, ChatGPT, and Perplexity when seeking your services.`,
+        `We begin by conducting keyword research and keyword mapping. Our SEO team will discuss potential topics you may want to avoid, and get to work on creating a detailed content plan based on keywords that:`,
       bullets: [
-        'Align with your exact industry compliance rules (SRA, CQC & YMYL guidelines)',
-        'Identify high-converting search queries appearing in Google SERPs & AI Overviews',
-        'Map entity co-occurrences to secure brand recommendations in AI answer engines',
+        `Align with your ${industryName || 'business'} requirements`,
+        'Are relevant to what is already appearing in the SERPs',
+        'People are actively searching for on Google',
       ],
     },
     {
@@ -21,38 +21,40 @@ export default function SeoGeoProcessTimeline({ industryName }: { industryName?:
       title: 'CREATE A BESPOKE CONTENT PLAN',
       side: 'right',
       description:
-        `In ${industryName || 'your industry'}, authoritative content demonstrating trust, expertise, and precision is an absolute requirement. We create content unique to your capabilities—from specialized service landing pages to technical research hubs.`,
+        `In ${industryName || 'your sector'}, authoritative content that demonstrates trust and expertise is an absolute must. We will create content unique to your services—from practice landing pages to specialized guides. We produce a range of content types, such as:`,
       bullets: [
-        'Location & geotargeted service-area landing pages',
-        'Practice-area & specialized service breakdown hubs',
-        'Structured FAQ pages with machine-readable microdata',
-        'Expert commentary & high-intent buyer decision guides',
+        'Location & regional service pages',
+        'Specialist service breakdown pages',
+        'Client support & decision guides',
+        'Authoritative industry articles',
       ],
+      extraText:
+        'Our content writers have experience writing within this sector and will produce expert content that builds topical authority and trust with your target audience.',
     },
     {
       num: '03',
-      title: 'TECHNICAL SEO & SCHEMA GRAPH ARCHITECTURE',
+      title: 'TECHNICAL SEO & ON-PAGE OPTIMISATION',
       side: 'left',
       description:
-        'We optimize your website architecture to eliminate technical crawl bottlenecks and inject machine-readable Schema.org JSON-LD data graphs directly into search engine and AI model crawlers.',
+        'We audit and optimize your website technical architecture to ensure Google and other search engines crawl, render, and index your pages without any technical friction.',
       bullets: [
-        'Full Organization, LegalService & MedicalBusiness JSON-LD schema',
-        'Mobile page speed & Core Web Vitals optimization',
-        'Faceted navigation index control & canonical URL hierarchy',
-        'Schema graph entity linking (Wikidata & Crunchbase co-occurrences)',
+        'Technical website & crawl budget audit',
+        'On-page title tag & meta description optimisation',
+        'Mobile page speed & Core Web Vitals performance',
+        'Structured Schema.org microdata implementation',
       ],
     },
     {
       num: '04',
-      title: 'DIGITAL PR & LLM CITATION BUILDING',
+      title: 'AUTHORITY BUILDING & LINK ACQUISITION',
       side: 'right',
       description:
-        'Generative AI models and search algorithms prioritize brands cited across authoritative publications and media outlets. We execute targeted PR campaigns to secure high-authority references that solidify your domain authority.',
+        'To outrank established competitors on Google, search engines need to see that reputable websites trust you. We build high-quality backlinks and digital PR coverage to elevate your domain authority.',
       bullets: [
-        'Tier-1 industry press coverage & unlinked brand mention conversions',
-        'AI answer engine source citation tracking (ChatGPT & Perplexity)',
-        'Wikidata & directory entity reference alignment',
-        'Transparent monthly enquiry & organic client attribution reporting',
+        'High-authority backlink acquisition & Digital PR',
+        'Competitor backlink gap analysis',
+        'Local citation & map pack optimisation',
+        'Transparent monthly ranking & organic lead reporting',
       ],
     },
   ];
@@ -116,7 +118,7 @@ export default function SeoGeoProcessTimeline({ industryName }: { industryName?:
                 <p style={{ color: '#555555', fontSize: '0.98rem', lineHeight: 1.65, marginBottom: '1.2rem' }}>
                   {step.description}
                 </p>
-                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.92rem', color: '#000000' }}>
+                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.92rem', color: '#000000', marginBottom: step.extraText ? '1.2rem' : '0' }}>
                   {step.bullets.map((b, i) => (
                     <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', lineHeight: 1.5 }}>
                       <span style={{ fontWeight: 900, color: '#000000' }}>•</span>
@@ -124,6 +126,11 @@ export default function SeoGeoProcessTimeline({ industryName }: { industryName?:
                     </li>
                   ))}
                 </ul>
+                {step.extraText && (
+                  <p style={{ color: '#555555', fontSize: '0.95rem', lineHeight: 1.65, paddingTop: '0.5rem', borderTop: '1px solid #f0f0f0' }}>
+                    {step.extraText}
+                  </p>
+                )}
               </div>
             </div>
 
@@ -150,7 +157,7 @@ export default function SeoGeoProcessTimeline({ industryName }: { industryName?:
       <style jsx global>{`
         @media (max-width: 868px) {
           .timeline-spine {
-            left: '20px' !important;
+            left: 20px !important;
             transform: none !important;
           }
           .timeline-row {
