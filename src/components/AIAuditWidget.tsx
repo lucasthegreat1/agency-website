@@ -62,7 +62,7 @@ export default function AIAuditWidget() {
         backgroundColor: '#ffffff',
         border: '1px solid #e5e5e5',
         borderRadius: '24px',
-        padding: '3rem',
+        padding: 'clamp(1.5rem, 4vw, 3rem)',
         boxShadow: '0 8px 24px rgba(0, 0, 0, 0.04)',
         color: '#000000',
       }}
@@ -73,15 +73,15 @@ export default function AIAuditWidget() {
             <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#000000' }} /> Free Instant Website & SEO Audit
           </div>
 
-          <h3 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#000000', letterSpacing: '-0.02em', marginBottom: '0.8rem' }}>
+          <h3 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.2rem)', fontWeight: 800, color: '#000000', letterSpacing: '-0.02em', marginBottom: '0.8rem' }}>
             Audit Your Website’s Search & AI Visibility
           </h3>
-          <p style={{ color: '#555555', fontSize: '1.05rem', marginBottom: '2.5rem', lineHeight: 1.6 }}>
+          <p style={{ color: '#555555', fontSize: '0.95rem', marginBottom: '2rem', lineHeight: 1.6 }}>
             Discover technical issues holding back your rankings and see how frequently search engines and AI models recommend your website.
           </p>
 
-          <form onSubmit={handleScan} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.2rem' }}>
-            <div style={{ gridColumn: 'span 2' }}>
+          <form onSubmit={handleScan} className="audit-form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.2rem' }}>
+            <div style={{ gridColumn: 'span 2' }} className="full-width-col">
               <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: 700, color: '#000000', marginBottom: '0.5rem' }}>
                 WEBSITE URL *
               </label>
@@ -108,7 +108,7 @@ export default function AIAuditWidget() {
               </div>
             </div>
 
-            <div>
+            <div className="full-width-col">
               <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: 700, color: '#000000', marginBottom: '0.5rem' }}>
                 BUSINESS / BRAND NAME
               </label>
@@ -130,7 +130,7 @@ export default function AIAuditWidget() {
               />
             </div>
 
-            <div>
+            <div className="full-width-col">
               <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: 700, color: '#000000', marginBottom: '0.5rem' }}>
                 INDUSTRY SECTOR
               </label>
@@ -157,7 +157,7 @@ export default function AIAuditWidget() {
               </select>
             </div>
 
-            <div style={{ gridColumn: 'span 2', marginTop: '0.8rem' }}>
+            <div style={{ gridColumn: 'span 2', marginTop: '0.8rem' }} className="full-width-col">
               <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '1.1rem' }}>
                 Generate Free Audit Report
               </button>
@@ -218,7 +218,7 @@ export default function AIAuditWidget() {
               <div className="soft-pill-tag" style={{ marginBottom: '0.4rem' }}>
                 ✓ Audit Complete
               </div>
-              <h4 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#000000' }}>
+              <h4 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#000000' }}>
                 Diagnostic Results for <span style={{ textDecoration: 'underline' }}>{url}</span>
               </h4>
             </div>
@@ -227,39 +227,39 @@ export default function AIAuditWidget() {
             </button>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
-            <div style={{ backgroundColor: '#000000', color: '#ffffff', padding: '1.5rem', borderRadius: '16px', textAlign: 'center' }}>
-              <span style={{ fontSize: '0.78rem', color: '#aaaaaa', textTransform: 'uppercase', fontWeight: 700 }}>OVERALL HEALTH SCORE</span>
-              <div style={{ fontSize: '3rem', fontWeight: 800, color: '#ffffff', lineHeight: 1.1, margin: '0.3rem 0' }}>
-                64<span style={{ fontSize: '1.3rem', color: '#666666' }}>/100</span>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+            <div style={{ backgroundColor: '#000000', color: '#ffffff', padding: '1.25rem', borderRadius: '16px', textAlign: 'center' }}>
+              <span style={{ fontSize: '0.75rem', color: '#aaaaaa', textTransform: 'uppercase', fontWeight: 700 }}>OVERALL HEALTH SCORE</span>
+              <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#ffffff', lineHeight: 1.1, margin: '0.3rem 0' }}>
+                64<span style={{ fontSize: '1.1rem', color: '#666666' }}>/100</span>
               </div>
-              <span style={{ fontSize: '0.78rem', color: '#000000', backgroundColor: '#ffffff', padding: '0.2rem 0.6rem', borderRadius: '999px', fontWeight: 700 }}>MODERATE FOOTPRINT</span>
+              <span style={{ fontSize: '0.72rem', color: '#000000', backgroundColor: '#ffffff', padding: '0.2rem 0.5rem', borderRadius: '999px', fontWeight: 700 }}>MODERATE FOOTPRINT</span>
             </div>
 
             <div style={{ backgroundColor: '#f8f8f8', border: '1px solid #e5e5e5', padding: '1.25rem', borderRadius: '16px' }}>
-              <span style={{ fontSize: '0.78rem', color: '#555555', fontWeight: 700 }}>SEARCH RANKING DENSITY</span>
-              <div style={{ fontSize: '1.8rem', fontWeight: 800, color: '#000000', margin: '0.2rem 0' }}>42%</div>
-              <p style={{ fontSize: '0.8rem', color: '#666666', fontWeight: 600 }}>Missing key location terms</p>
+              <span style={{ fontSize: '0.75rem', color: '#555555', fontWeight: 700 }}>SEARCH RANKING DENSITY</span>
+              <div style={{ fontSize: '1.6rem', fontWeight: 800, color: '#000000', margin: '0.2rem 0' }}>42%</div>
+              <p style={{ fontSize: '0.78rem', color: '#666666', fontWeight: 600 }}>Missing key terms</p>
             </div>
 
             <div style={{ backgroundColor: '#f8f8f8', border: '1px solid #e5e5e5', padding: '1.25rem', borderRadius: '16px' }}>
-              <span style={{ fontSize: '0.78rem', color: '#555555', fontWeight: 700 }}>MOBILE PERFORMANCE</span>
-              <div style={{ fontSize: '1.8rem', fontWeight: 800, color: '#000000', margin: '0.2rem 0' }}>78%</div>
-              <p style={{ fontSize: '0.8rem', color: '#000000', fontWeight: 600 }}>Fast responsive layout</p>
+              <span style={{ fontSize: '0.75rem', color: '#555555', fontWeight: 700 }}>MOBILE PERFORMANCE</span>
+              <div style={{ fontSize: '1.6rem', fontWeight: 800, color: '#000000', margin: '0.2rem 0' }}>78%</div>
+              <p style={{ fontSize: '0.78rem', color: '#000000', fontWeight: 600 }}>Fast responsive layout</p>
             </div>
 
             <div style={{ backgroundColor: '#f8f8f8', border: '1px solid #e5e5e5', padding: '1.25rem', borderRadius: '16px' }}>
-              <span style={{ fontSize: '0.78rem', color: '#555555', fontWeight: 700 }}>SCHEMA GRAPH HEALTH</span>
-              <div style={{ fontSize: '1.8rem', fontWeight: 800, color: '#000000', margin: '0.2rem 0' }}>35%</div>
-              <p style={{ fontSize: '0.8rem', color: '#666666', fontWeight: 600 }}>Missing JSON-LD tags</p>
+              <span style={{ fontSize: '0.75rem', color: '#555555', fontWeight: 700 }}>SCHEMA GRAPH HEALTH</span>
+              <div style={{ fontSize: '1.6rem', fontWeight: 800, color: '#000000', margin: '0.2rem 0' }}>35%</div>
+              <p style={{ fontSize: '0.78rem', color: '#666666', fontWeight: 600 }}>Missing JSON-LD tags</p>
             </div>
           </div>
 
-          <div style={{ border: '1px solid #e5e5e5', padding: '1.5rem', borderRadius: '16px', backgroundColor: '#f8f8f8', marginBottom: '2rem' }}>
-            <h5 style={{ fontSize: '0.9rem', fontWeight: 800, color: '#000000', marginBottom: '1rem', textTransform: 'uppercase' }}>
+          <div style={{ border: '1px solid #e5e5e5', padding: '1.25rem', borderRadius: '16px', backgroundColor: '#f8f8f8', marginBottom: '2rem' }}>
+            <h5 style={{ fontSize: '0.85rem', fontWeight: 800, color: '#000000', marginBottom: '0.8rem', textTransform: 'uppercase' }}>
               IDENTIFIED TECHNICAL OPPORTUNITIES
             </h5>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.6rem', fontSize: '0.92rem', color: '#333333' }}>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.6rem', fontSize: '0.9rem', color: '#333333' }}>
               <li style={{ display: 'flex', gap: '0.6rem', alignItems: 'center' }}>
                 <span style={{ color: '#000000', fontWeight: 800 }}>✓</span>
                 <span><strong>Schema Markup:</strong> Unmapped Organization and Local Business JSON-LD structure.</span>

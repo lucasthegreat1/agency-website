@@ -153,25 +153,6 @@ export default function SeoGeoProcessTimeline({ industryName }: { industryName?:
           </div>
         ))}
       </div>
-
-      <style jsx global>{`
-        @media (max-width: 868px) {
-          .timeline-spine {
-            left: 20px !important;
-            transform: none !important;
-          }
-          .timeline-row {
-            grid-template-columns: 40px 1fr !important;
-          }
-          .timeline-row > div:nth-child(1) {
-            grid-column: 2 !important;
-            padding: 0 !important;
-          }
-          .timeline-row > div:nth-child(2) {
-            grid-column: 1 !important;
-          }
-        }
-      `}</style>
     </div>
   );
 }
