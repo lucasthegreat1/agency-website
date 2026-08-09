@@ -18,7 +18,7 @@ export default function Footer() {
           {/* Column 1 */}
           <div style={{ gridColumn: 'span 2' }}>
             <Link href="/" style={{ fontSize: '1.6rem', fontWeight: 900, color: '#ffffff', letterSpacing: '-0.03em', textDecoration: 'none', display: 'inline-block', marginBottom: '1.2rem' }}>
-              XTRACT<span style={{ color: '#ffffff' }}>.AI</span>
+              SEO<span style={{ color: '#ffffff' }}>.AI</span>
             </Link>
             <p style={{ color: '#888888', fontSize: '0.98rem', lineHeight: 1.65, maxWidth: '360px', marginBottom: '1.5rem' }}>
               Specialist search & AI visibility agency helping UK brands convert organic searches into high-value clients and revenue.

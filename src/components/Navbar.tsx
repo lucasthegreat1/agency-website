@@ -30,7 +30,7 @@ export default function Navbar() {
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '80px' }}>
         {/* Brand Logo */}
         <Link href="/" style={{ fontSize: '1.5rem', fontWeight: 900, color: '#000000', letterSpacing: '-0.03em', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.2rem' }}>
-          XTRACT<span style={{ color: '#000000' }}>.AI</span>
+          SEO<span style={{ color: '#000000' }}>.AI</span>
         </Link>
 
         {/* Desktop Nav Links */}
