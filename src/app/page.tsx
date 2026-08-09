@@ -51,7 +51,7 @@ export default function HomePage() {
                   marginBottom: '2rem',
                 }}
               >
-                Specialist UK SEO built to rank your business for high-intent searches that generate real enquiries, appointments, and organic sales.
+                Specialist UK SEO built for law firms, healthcare, home improvement, industrial B2B, private education, and Shopify e-commerce brands.
               </p>
 
               {/* Bullet points with checkmarks */}
@@ -60,7 +60,7 @@ export default function HomePage() {
                   <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#000000', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', flexShrink: 0, fontWeight: 800 }}>
                     ✓
                   </div>
-                  <span>Legal, Healthcare, Home Improvement & B2B Specialist SEO</span>
+                  <span>Legal, Healthcare, Home Improvement, B2B & Shopify E-Commerce SEO</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontSize: '1.05rem', fontWeight: 600, color: '#000000' }}>
                   <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#000000', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', flexShrink: 0, fontWeight: 800 }}>
@@ -117,7 +117,7 @@ export default function HomePage() {
               { name: 'Home Improvement', path: '/seo-for-home-improvement', desc: 'Cut cost per lead vs £50+ PPC/Checkatrade ads for roofers, builders & contractors.' },
               { name: 'Industrial & B2B Manufacturing', path: '/seo-for-industrial-b2b', desc: 'Spec-driven SEO targeting procurement teams and design engineers searching exact DIN/ISO specs.' },
               { name: 'Private Schools & Education', path: '/seo-for-private-schools-education', desc: 'Long-lead enrolment runway SEO engaging parents early in their 12-month research journey.' },
-              { name: 'Shopify Stores', path: '/seo-for-shopify-stores', desc: 'Specialist Shopify technical SEO fixing hidden liquid code issues holding back your rankings.' },
+              { name: 'Shopify E-Commerce Stores', path: '/seo-for-shopify-stores', desc: 'Specialist Shopify technical SEO fixing hidden liquid code issues holding back your rankings.' },
             ].map((v, idx) => (
               <Link
                 key={v.path}
