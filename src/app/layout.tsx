@@ -4,25 +4,53 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'SEO | Enterprise Search & Generative AI Visibility Agency',
-  description: 'Specialist UK SEO agency helping brands rank #1 on Google and convert search queries into instructed clients and organic sales.',
+  metadataBase: new URL('https://tryxtract.co.uk'),
+  title: {
+    default: 'XTRACT | UK Search & AI Visibility Agency',
+    template: '%s | XTRACT AI Agency',
+  },
+  description:
+    'Specialist UK search & AI visibility agency engineered for law firms, healthcare, home improvement, industrial B2B, private education, and Shopify e-commerce brands.',
   keywords: [
-    'SEO Agency',
-    'UK SEO',
+    'SEO Agency UK',
+    'AI Search Optimization',
     'Law Firm SEO',
     'Private Healthcare SEO',
     'Home Improvement SEO',
     'Industrial B2B SEO',
     'Private Education SEO',
-    'Shopify SEO',
+    'Shopify E-Commerce SEO',
+    'Generative Engine Optimization',
+    'Search Engine Optimization London',
   ],
-  authors: [{ name: 'SEO AI Team' }],
+  authors: [{ name: 'XTRACT Agency' }],
+  creator: 'XTRACT AI Agency',
+  publisher: 'XTRACT AI Agency',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: 'SEO | Enterprise Search & Generative AI Visibility Agency',
-    description: 'Specialist UK SEO agency helping brands rank #1 on Google and convert search queries into instructed clients and organic sales.',
-    url: 'https://seo.ai',
-    siteName: 'SEO Agency',
     type: 'website',
+    locale: 'en_GB',
+    url: 'https://tryxtract.co.uk',
+    siteName: 'XTRACT AI Agency',
+    title: 'XTRACT | Specialist UK Search & AI Visibility Agency',
+    description:
+      'Specialist UK search & AI visibility agency engineered for law firms, healthcare, home improvement, industrial B2B, private education, and Shopify e-commerce brands.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'XTRACT | Specialist UK Search & AI Visibility Agency',
+    description:
+      'Specialist UK search & AI visibility agency engineered for law firms, healthcare, home improvement, industrial B2B, private education, and Shopify e-commerce brands.',
   },
 };
 
@@ -34,19 +62,19 @@ export default function RootLayout({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    name: 'SEO Agency',
+    name: 'XTRACT AI Agency',
     description: 'Enterprise Search Engine Optimization and Generative AI Search Visibility Agency.',
-    url: 'https://seo.ai',
+    url: 'https://tryxtract.co.uk',
     email: 'info.xtractagency@gmail.com',
     areaServed: 'Worldwide',
     knowsAbout: [
       'Search Engine Optimization',
-      'Local SEO',
-      'Law Firm SEO',
+      'Generative Engine Optimization',
+      'AI Search Visibility',
+      'Legal SEO',
       'Healthcare SEO',
-      'Shopify SEO',
+      'Shopify E-Commerce SEO',
     ],
-    priceRange: '$$$$',
   };
 
   return (

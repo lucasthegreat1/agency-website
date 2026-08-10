@@ -40,7 +40,7 @@ export default function IndustryPageTemplate({ spec }: { spec: UKIndustrySpec })
         '@type': spec.schemaType,
         name: spec.h1,
         description: spec.metaDescription,
-        url: typeof window !== 'undefined' ? window.location.href : 'https://xtract-ai-seo.com',
+        url: typeof window !== 'undefined' ? window.location.href : 'https://tryxtract.co.uk',
       },
       {
         '@type': 'FAQPage',

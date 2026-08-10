@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://xtract-ai-seo.com';
+  const baseUrl = 'https://tryxtract.co.uk';
   const currentDate = new Date().toISOString();
 
   return [
