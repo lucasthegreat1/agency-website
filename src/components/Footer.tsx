@@ -49,7 +49,8 @@ export default function Footer() {
             </h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.8rem', fontSize: '0.95rem', color: '#aaaaaa' }}>
               <li><Link href="/" style={{ color: '#aaaaaa' }}>Home</Link></li>
-              <li><Link href="/services" style={{ color: '#aaaaaa' }}>Services</Link></li>
+              <li><Link href="/generative-engine-optimization" style={{ color: '#ffffff', fontWeight: 700 }}>GEO Service Page</Link></li>
+              <li><Link href="/services" style={{ color: '#aaaaaa' }}>Services Architecture</Link></li>
               <li><Link href="/industries" style={{ color: '#aaaaaa' }}>Industries Overview</Link></li>
               <li><Link href="/resources" style={{ color: '#aaaaaa' }}>Resources</Link></li>
               <li><Link href="/about" style={{ color: '#aaaaaa' }}>About Us</Link></li>
@@ -68,6 +69,7 @@ export default function Footer() {
               <li><Link href="/seo-for-industrial-b2b" style={{ color: '#aaaaaa' }}>Industrial B2B</Link></li>
               <li><Link href="/seo-for-private-schools-education" style={{ color: '#aaaaaa' }}>Private Education</Link></li>
               <li><Link href="/seo-for-shopify-stores" style={{ color: '#aaaaaa' }}>Shopify Stores</Link></li>
+              <li><Link href="/seo-for-cybersecurity" style={{ color: '#aaaaaa' }}>Cybersecurity Firms</Link></li>
             </ul>
           </div>
         </div>
