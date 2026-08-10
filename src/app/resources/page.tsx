@@ -27,16 +27,26 @@ export default function ResourcesPage() {
 
   const articles = [
     {
+      title: 'GEO Agency for Law Firms: Improve Your Visibility Across AI Search',
+      path: '/resources/geo-agency-for-law-firms',
+      summary:
+        'A complete guide on Generative Engine Optimization (GEO) for law firms. Learn how GEO helps legal practices get cited in ChatGPT, Perplexity, and Google AI Overviews.',
+      readTime: '12 min read',
+      tag: 'LAW FIRMS & LEGAL GEO',
+    },
+    {
       title: 'Why Is My Shopify Store Not Showing Up on Google?',
       path: '/resources/why-shopify-store-not-showing-up-on-google',
-      summary: 'A full diagnostic for why your Shopify store isn\'t ranking — including duplicate collection parameters, app bloat, and AI search readiness.',
+      summary:
+        'A full diagnostic for why your Shopify store isn\'t ranking — including duplicate collection parameters, app bloat, and AI search readiness.',
       readTime: '8 min read',
       tag: 'SHOPIFY & E-COMMERCE',
     },
     {
       title: 'Generative Engine Optimization (GEO) Technical Manual',
       path: '/services/generative-engine-optimization',
-      summary: 'How query fan-out variant generation works and how to structure your website to get cited across ChatGPT, Perplexity, and Google AI Overviews.',
+      summary:
+        'How query fan-out variant generation works and how to structure your website to get cited across ChatGPT, Perplexity, and Google AI Overviews.',
       readTime: '10 min read',
       tag: 'AI SEARCH OPTIMIZATION',
     },
