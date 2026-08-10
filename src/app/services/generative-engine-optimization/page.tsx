@@ -453,6 +453,22 @@ export default function GenerativeEngineOptimizationPage() {
                 </ul>
               </div>
             </div>
+
+            {/* Subtle Industry Specific Guide Link */}
+            <div style={{ backgroundColor: '#181818', border: '1px solid #222222', borderRadius: '18px', padding: '1.8rem 2.2rem', marginTop: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.2rem' }}>
+              <div>
+                <span style={{ fontSize: '0.78rem', fontWeight: 800, color: '#888888', letterSpacing: '0.08em', textTransform: 'uppercase' }}>SECTOR-SPECIFIC GEO GUIDE</span>
+                <h4 style={{ fontSize: '1.1rem', fontWeight: 800, color: '#ffffff', marginTop: '0.3rem', marginBottom: '0.2rem' }}>
+                  Operating a UK Law Firm or Legal Practice?
+                </h4>
+                <p style={{ color: '#aaaaaa', fontSize: '0.94rem', margin: 0 }}>
+                  Read our full guide on <Link href="/resources/geo-agency-for-law-firms" style={{ color: '#ffffff', fontWeight: 700, textDecoration: 'underline' }}>Generative Engine Optimization (GEO) for Law Firms & Legal Practices</Link>.
+                </p>
+              </div>
+              <Link href="/resources/geo-agency-for-law-firms" className="btn btn-outline" style={{ padding: '0.7rem 1.4rem', fontSize: '0.88rem' }}>
+                Read Legal GEO Guide →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
