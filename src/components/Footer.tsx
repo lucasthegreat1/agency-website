@@ -49,7 +49,7 @@ export default function Footer() {
             </h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.8rem', fontSize: '0.95rem', color: '#aaaaaa' }}>
               <li><Link href="/" style={{ color: '#aaaaaa' }}>Home</Link></li>
-              <li><Link href="/generative-engine-optimization" style={{ color: '#ffffff', fontWeight: 700 }}>GEO Service Page</Link></li>
+              <li><Link href="/services/generative-engine-optimization" style={{ color: '#ffffff', fontWeight: 700 }}>GEO Service Page</Link></li>
               <li><Link href="/services" style={{ color: '#aaaaaa' }}>Services Architecture</Link></li>
               <li><Link href="/industries" style={{ color: '#aaaaaa' }}>Industries Overview</Link></li>
               <li><Link href="/resources" style={{ color: '#aaaaaa' }}>Resources</Link></li>

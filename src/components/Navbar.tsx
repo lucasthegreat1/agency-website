@@ -11,7 +11,6 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const navItems = [
-    { name: 'GEO Service', href: '/generative-engine-optimization' },
     { name: 'Services', href: '/services' },
     { name: 'Industries', href: '/industries' },
     { name: 'Resources', href: '/resources' },
@@ -37,7 +36,7 @@ export default function Navbar() {
         {/* Desktop Nav Links */}
         <nav style={{ display: 'flex', alignItems: 'center', gap: '2rem' }} className="desktop-only">
           {navItems.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = pathname === item.href || (item.href === '/services' && pathname.startsWith('/services'));
             return (
               <Link
                 key={item.name}

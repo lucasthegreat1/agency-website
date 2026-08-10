@@ -13,6 +13,7 @@ export default function AIAuditWidget() {
   const [requestType, setRequestType] = useState('Both Audit & Meeting');
   const [notes, setNotes] = useState('');
 
+  const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
@@ -30,25 +31,41 @@ export default function AIAuditWidget() {
     `NEW INTAKE REQUEST DETAILS:\n-----------------------------\nWebsite URL: ${url}\nFull Name: ${name}\nWork Email: ${email}\nCompany/Brand: ${brand || 'N/A'}\nIndustry Sector: ${industry}\nRequest Type: ${requestType}\nAdditional Notes: ${notes || 'None'}`
   )}`;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
 
     try {
-      confetti({
-        particleCount: 80,
-        spread: 70,
-        origin: { y: 0.6 },
-        colors: ['#000000', '#555555', '#888888'],
+      // Send background API request to Resend email service
+      await fetch('/api/audit-request', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          url,
+          name,
+          email,
+          brand,
+          industry,
+          requestType,
+          notes,
+        }),
       });
     } catch (err) {
-      // ignore fallback
+      console.error('Submission API error:', err);
+    } finally {
+      setLoading(false);
+      setSubmitted(true);
+      try {
+        confetti({
+          particleCount: 80,
+          spread: 70,
+          origin: { y: 0.6 },
+          colors: ['#ffffff', '#aaaaaa', '#777777'],
+        });
+      } catch (e) {
+        // ignore
+      }
     }
-
-    // Auto-launch client's email application pre-filled with all details to info.xtractagency@gmail.com
-    setTimeout(() => {
-      window.location.href = mailtoHref;
-    }, 400);
   };
 
   return (
@@ -272,11 +289,12 @@ export default function AIAuditWidget() {
             <div style={{ gridColumn: 'span 2', marginTop: '0.8rem' }} className="full-width-col">
               <button
                 type="submit"
+                disabled={loading}
                 className="btn btn-primary"
-                style={{ width: '100%', padding: '1.1rem', fontSize: '1rem' }}
+                style={{ width: '100%', padding: '1.1rem', fontSize: '1rem', opacity: loading ? 0.7 : 1 }}
               >
                 <span style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                  Send Request to info.xtractagency@gmail.com <Send size={18} />
+                  {loading ? 'Submitting Request...' : 'Send Request to info.xtractagency@gmail.com'} <Send size={18} />
                 </span>
               </button>
             </div>
@@ -291,8 +309,8 @@ export default function AIAuditWidget() {
               height: '64px',
               margin: '0 auto 1.5rem auto',
               borderRadius: '50%',
-              backgroundColor: '#000000',
-              color: '#ffffff',
+              backgroundColor: '#ffffff',
+              color: '#000000',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -301,18 +319,18 @@ export default function AIAuditWidget() {
             <CheckCircle size={32} />
           </div>
 
-          <h4 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#000000', marginBottom: '0.8rem' }}>
-            Intake Request Pre-filled & Ready!
+          <h4 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#ffffff', marginBottom: '0.8rem' }}>
+            Intake Request Submitted!
           </h4>
-          <p style={{ color: '#555555', fontSize: '1.05rem', lineHeight: 1.6, maxWidth: '580px', margin: '0 auto 2rem auto' }}>
-            Your email app has been opened with your intake details ready to send to <strong>info.xtractagency@gmail.com</strong>.
+          <p style={{ color: '#aaaaaa', fontSize: '1.05rem', lineHeight: 1.6, maxWidth: '580px', margin: '0 auto 2rem auto' }}>
+            Thank you! Your intake request has been sent directly to <strong>info.xtractagency@gmail.com</strong>.
           </p>
 
-          <div style={{ backgroundColor: '#f8f8f8', border: '1px solid #e5e5e5', borderRadius: '16px', padding: '1.5rem', maxWidth: '520px', margin: '0 auto 2rem auto', textAlign: 'left' }}>
-            <div style={{ fontSize: '0.82rem', fontWeight: 800, color: '#666666', textTransform: 'uppercase', marginBottom: '0.8rem' }}>
-              INTAKE DETAILS
+          <div style={{ backgroundColor: '#181818', border: '1px solid #222222', borderRadius: '16px', padding: '1.5rem', maxWidth: '520px', margin: '0 auto 2rem auto', textAlign: 'left' }}>
+            <div style={{ fontSize: '0.82rem', fontWeight: 800, color: '#aaaaaa', textTransform: 'uppercase', marginBottom: '0.8rem' }}>
+              INTAKE SUMMARY
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.92rem', color: '#000000' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.92rem', color: '#ffffff' }}>
               <div><strong>Target Domain:</strong> {url}</div>
               <div><strong>Full Name:</strong> {name}</div>
               <div><strong>Contact Email:</strong> {email}</div>
@@ -325,12 +343,12 @@ export default function AIAuditWidget() {
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a
               href={mailtoHref}
-              className="btn btn-primary"
+              className="btn btn-outline"
               style={{ padding: '0.9rem 2rem', fontSize: '0.95rem' }}
             >
-              ✉ Click Here to Send Email Now
+              ✉ Send Optional Backup Email
             </a>
-            <button onClick={() => setSubmitted(false)} className="btn btn-outline" style={{ padding: '0.9rem 1.8rem', fontSize: '0.95rem' }}>
+            <button onClick={() => setSubmitted(false)} className="btn btn-primary" style={{ padding: '0.9rem 1.8rem', fontSize: '0.95rem' }}>
               Submit Another Request
             </button>
           </div>

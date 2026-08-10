@@ -1,120 +1,148 @@
-'use client';
-
-import React from 'react';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import AIAuditWidget from '@/components/AIAuditWidget';
 
+export const metadata: Metadata = {
+  title: 'About Xtract | SEO & AI Search Agency',
+  description: 'Xtract is an SEO and AI search agency working with a small number of industries we know deeply. Meet the team and our approach.',
+  openGraph: {
+    title: 'About Xtract | SEO & AI Search Agency',
+    description: 'Xtract is an SEO and AI search agency working with a small number of industries we know deeply. Meet the team and our approach.',
+    type: 'website',
+    url: 'https://tryxtract.co.uk/about',
+  },
+};
+
 export default function AboutPage() {
-  const team = [
-    {
-      num: '[01]',
-      name: 'Alexander Vance',
-      role: 'Co-Founder & CEO',
-      bio: 'Former Staff Search Engineer at Google & Principal Architect at Yext. 14+ years pioneering semantic Knowledge Graph algorithms.',
-      tag: 'EX-GOOGLE SEARCH',
-    },
-    {
-      num: '[02]',
-      name: 'Elena Rostova',
-      role: 'Chief AI & GEO Officer',
-      bio: 'NLP Researcher specializing in Large Language Model retrieval augmented generation (RAG) and entity co-occurrence probability.',
-      tag: 'PHD NLP RESEARCH',
-    },
-    {
-      num: '[03]',
-      name: 'Marcus Chen',
-      role: 'VP of Enterprise Technical SEO',
-      bio: 'Scaled programmatic SEO infrastructure for 4 Fortune 500 SaaS companies to over 80M monthly organic visits.',
-      tag: 'PROGRAMMATIC GURU',
-    },
-  ];
-
   return (
-    <div style={{ backgroundColor: '#fcfcfc', minHeight: '100vh', paddingTop: '5rem', paddingBottom: '6rem' }}>
-      {/* Header */}
-      <section style={{ marginBottom: '4rem' }}>
+    <div style={{ backgroundColor: '#000000', color: '#ffffff', minHeight: '100vh', paddingTop: '5rem', paddingBottom: '6rem' }}>
+      {/* HERO SECTION */}
+      <section style={{ marginBottom: '5rem' }}>
         <div className="container">
-          <div className="mono-tag" style={{ marginBottom: '1.5rem' }}>
-            <span className="square-bullet" /> AGENCY VISION
+          <div className="soft-pill-tag" style={{ marginBottom: '1.5rem', backgroundColor: '#111111', borderColor: '#222222', color: '#ffffff' }}>
+            <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#ffffff' }} />
+            About Xtract
           </div>
-          <h1 style={{ fontSize: 'clamp(2.8rem, 5.5vw, 4.5rem)', fontWeight: 800, color: '#000000', letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: '1.5rem' }}>
-            Engineering Search Authority for Category Kings.
-          </h1>
-          <p style={{ fontSize: '1.2rem', color: '#666666', lineHeight: 1.6, maxWidth: '640px', marginBottom: '2rem' }}>
-            XTRACT was founded on a singular premise: Search is no longer just a list of ten blue links. We help world-class UK companies command search engine rankings and AI recommendations.
-          </p>
 
-          <div style={{ backgroundColor: '#f8f8f8', border: '1px solid #e5e5e5', borderRadius: '16px', padding: '1.5rem 2rem', display: 'inline-flex', alignItems: 'center', gap: '1rem' }}>
-            <span style={{ fontWeight: 800, fontSize: '0.9rem', color: '#000000', textTransform: 'uppercase' }}>GET IN TOUCH:</span>
-            <a href="mailto:info.xtractagency@gmail.com" style={{ fontWeight: 800, fontSize: '1.05rem', color: '#000000', textDecoration: 'underline' }}>
-              info.xtractagency@gmail.com
+          <h1
+            style={{
+              fontSize: 'clamp(2.5rem, 5.5vw, 4.8rem)',
+              fontWeight: 900,
+              color: '#ffffff',
+              letterSpacing: '-0.04em',
+              lineHeight: 1.05,
+              marginBottom: '1.8rem',
+              maxWidth: '960px',
+            }}
+          >
+            SEO from people who'll tell you the truth about what's working
+          </h1>
+        </div>
+      </section>
+
+      {/* WHY XTRACT EXISTS */}
+      <section style={{ marginBottom: '5rem' }}>
+        <div className="container">
+          <div className="section-bar" style={{ borderColor: '#222222', color: '#aaaaaa' }}>
+            <span>(01) OUR PURPOSE</span>
+            <span>Why Xtract Exists</span>
+          </div>
+
+          <div style={{ backgroundColor: '#111111', border: '1px solid #222222', borderRadius: '24px', padding: 'clamp(2rem, 4vw, 3.5rem)' }}>
+            <h2 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em', marginBottom: '1.2rem' }}>
+              Why Xtract exists
+            </h2>
+            <p style={{ color: '#aaaaaa', fontSize: '1.08rem', lineHeight: 1.7, maxWidth: '840px' }}>
+              Most SEO agencies promise everything to everyone. We do the opposite — we work with a small number of industries, go genuinely deep on how their customers search, and say no to work outside that where we can't confidently deliver results. If something isn't working, we'll tell you and change approach, rather than keep billing for it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* OUR APPROACH */}
+      <section style={{ marginBottom: '5rem' }}>
+        <div className="container">
+          <div className="section-bar" style={{ borderColor: '#222222', color: '#aaaaaa' }}>
+            <span>(02) METHODOLOGY</span>
+            <span>Our Approach</span>
+          </div>
+
+          <div style={{ backgroundColor: '#111111', border: '1px solid #222222', borderRadius: '24px', padding: 'clamp(2rem, 4vw, 3.5rem)' }}>
+            <h2 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em', marginBottom: '1.5rem' }}>
+              Our approach
+            </h2>
+            <p style={{ color: '#aaaaaa', fontSize: '1.05rem', lineHeight: 1.7, maxWidth: '840px', marginBottom: '1.5rem' }}>
+              We start every client relationship with a full technical and content audit — no guesswork, no templated recommendations copy-pasted across industries. From there, we build a strategy around the real search behaviour your customers show (informational research, local intent, AI-assisted research), not just a generic keyword list.
+            </p>
+            <p style={{ color: '#aaaaaa', fontSize: '1.05rem', lineHeight: 1.7, maxWidth: '840px' }}>
+              We're honest about what's proven and what's emerging. Traditional SEO has 20+ years of established best practice; AI search visibility is genuinely new, and we won't promise guaranteed outcomes there that nobody in the industry can honestly back up.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* MEET THE TEAM */}
+      <section style={{ marginBottom: '5rem' }}>
+        <div className="container">
+          <div className="section-bar" style={{ borderColor: '#222222', color: '#aaaaaa' }}>
+            <span>(03) LEADERSHIP</span>
+            <span>Meet the Team</span>
+          </div>
+
+          <h2 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em', marginBottom: '2.5rem' }}>
+            Meet the team
+          </h2>
+
+          <div style={{ backgroundColor: '#111111', border: '1px solid #222222', borderRadius: '24px', padding: 'clamp(2rem, 4vw, 3rem)', display: 'flex', gap: '2rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
+            <div
+              style={{
+                width: '72px',
+                height: '72px',
+                borderRadius: '50%',
+                backgroundColor: '#ffffff',
+                color: '#000000',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontWeight: 900,
+                fontSize: '1.6rem',
+                flexShrink: 0,
+              }}
+            >
+              LH
+            </div>
+            <div style={{ maxWidth: '720px' }}>
+              <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#ffffff', marginBottom: '0.4rem' }}>
+                Luke Haracic — SEO Consultant
+              </h3>
+              <p style={{ color: '#aaaaaa', fontSize: '1.02rem', lineHeight: 1.65 }}>
+                Luke leads technical SEO and AI search strategy at Xtract, working directly with clients to diagnose indexing, crawlability, and ranking issues most audits miss. He writes the majority of Xtract's guides, focused on the technical problems generic SEO content tends to skip over.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WANT TO WORK WITH US? */}
+      <section style={{ marginBottom: '6rem' }}>
+        <div className="container">
+          <div style={{ backgroundColor: '#111111', border: '1px solid #222222', borderRadius: '24px', padding: 'clamp(2rem, 4vw, 3.5rem)' }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em', marginBottom: '1rem' }}>
+              Want to work with us?
+            </h2>
+            <p style={{ color: '#aaaaaa', fontSize: '1.05rem', lineHeight: 1.65, maxWidth: '780px', marginBottom: '2rem' }}>
+              We take on a limited number of clients at a time so we can actually deliver the attention this approach requires. Book a free audit and we'll tell you honestly whether we're a good fit.
+            </p>
+            <a href="#audit" className="btn btn-primary" style={{ padding: '0.9rem 2rem' }}>
+              Book a Free Audit
             </a>
           </div>
         </div>
       </section>
 
-      {/* Principles Section */}
-      <section>
-        <div className="container">
-          <div className="section-bar">
-            <span>(01) PRINCIPLES</span>
-            <span>Technical Integrity</span>
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1.5rem', marginBottom: '6rem' }}>
-            <div className="grid-card">
-              <div className="card-num">[01]</div>
-              <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#000000', marginBottom: '0.8rem' }}>Algorithmic Rigor</h3>
-              <p style={{ color: '#666666', fontSize: '0.95rem', lineHeight: 1.6 }}>
-                We test every GEO strategy against empirical LLM response corpora before deploying to client production environments.
-              </p>
-            </div>
-
-            <div className="grid-card">
-              <div className="card-num">[02]</div>
-              <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#000000', marginBottom: '0.8rem' }}>Knowledge Graph Primacy</h3>
-              <p style={{ color: '#666666', fontSize: '0.95rem', lineHeight: 1.6 }}>
-                We build machine-readable JSON-LD entity structures that search engines and AI models trust as definitive source truth.
-              </p>
-            </div>
-
-            <div className="grid-card">
-              <div className="card-num">[03]</div>
-              <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#000000', marginBottom: '0.8rem' }}>Quantifiable Revenue</h3>
-              <p style={{ color: '#666666', fontSize: '0.95rem', lineHeight: 1.6 }}>
-                Vanity search impressions don’t pay bills. We tie every optimization directly to qualified pipeline and ARR expansion.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership */}
-      <section style={{ backgroundColor: '#000000', color: '#ffffff', padding: '6rem 0' }}>
-        <div className="container">
-          <div className="mono-tag" style={{ marginBottom: '1.5rem' }}>
-            <span className="square-bullet" /> LEADERSHIP
-          </div>
-          <h2 style={{ fontSize: '3rem', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.03em', marginBottom: '4rem' }}>
-            Search & AI Engineering Veterans
-          </h2>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-            {team.map((member, i) => (
-              <div key={i} style={{ backgroundColor: '#111111', border: '1px solid #222222', padding: '2.5rem' }}>
-                <div className="card-num" style={{ marginBottom: '1rem' }}>{member.num}</div>
-                <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#ffffff', marginBottom: '0.3rem' }}>{member.name}</h3>
-                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', color: '#ff4500', marginBottom: '1.2rem' }}>{member.role.toUpperCase()}</div>
-                <p style={{ color: '#aaaaaa', fontSize: '0.9rem', lineHeight: 1.6 }}>{member.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Embedded Audit */}
-      <section id="audit-widget" style={{ paddingTop: '6rem' }}>
-        <div className="container" style={{ maxWidth: '900px' }}>
+      {/* EMBEDDED INTAKE AUDIT WIDGET */}
+      <section id="audit">
+        <div className="container" style={{ maxWidth: '920px' }}>
           <AIAuditWidget />
         </div>
       </section>

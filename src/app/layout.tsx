@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: '%s | XTRACT AI Agency',
   },
   description:
-    'Specialist UK search & AI visibility agency engineered for law firms, healthcare, home improvement, industrial B2B, private education, and Shopify e-commerce brands.',
+    'Specialist UK SEO & Generative Engine Optimization (GEO) agency engineered for law firms, healthcare, home improvement, industrial B2B, private education, and Shopify e-commerce brands.',
   keywords: [
     'SEO Agency UK',
     'AI Search Optimization',
@@ -37,6 +37,13 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/icon.png', type: 'image/png' },
+    ],
+    apple: [{ url: '/apple-icon.png', type: 'image/png' }],
+  },
   openGraph: {
     type: 'website',
     locale: 'en_GB',
@@ -44,13 +51,13 @@ export const metadata: Metadata = {
     siteName: 'XTRACT AI Agency',
     title: 'XTRACT | Specialist UK Search & AI Visibility Agency',
     description:
-      'Specialist UK search & AI visibility agency engineered for law firms, healthcare, home improvement, industrial B2B, private education, and Shopify e-commerce brands.',
+      'Specialist UK SEO & Generative Engine Optimization (GEO) agency engineered for law firms, healthcare, home improvement, industrial B2B, private education, and Shopify e-commerce brands.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'XTRACT | Specialist UK Search & AI Visibility Agency',
     description:
-      'Specialist UK search & AI visibility agency engineered for law firms, healthcare, home improvement, industrial B2B, private education, and Shopify e-commerce brands.',
+      'Specialist UK SEO & Generative Engine Optimization (GEO) agency engineered for law firms, healthcare, home improvement, industrial B2B, private education, and Shopify e-commerce brands.',
   },
 };
 
