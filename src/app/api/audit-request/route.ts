@@ -1,4 +1,4 @@
-import { NextResponse } from 'next';
+import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
   try {
@@ -24,33 +24,17 @@ export async function POST(request: Request) {
     };
 
     // Primary delivery: FormSubmit API endpoint
-    const formSubmitRes = await fetch('https://formsubmit.co/ajax/info.xtractagency@gmail.com', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-      },
-      body: JSON.stringify({
-        ...payload,
-        _template: 'table',
-        _captcha: 'false',
-      }),
-    });
-
-    // Secondary delivery backup: Web3Forms API
     try {
-      await fetch('https://api.web3forms.com/submit', {
+      await fetch('https://formsubmit.co/ajax/info.xtractagency@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
         },
         body: JSON.stringify({
-          access_key: 'info.xtractagency@gmail.com',
-          subject: `Intake Request from ${name} - ${url}`,
-          from_name: name,
-          email: email,
-          message: `Website: ${url}\nName: ${name}\nEmail: ${email}\nBrand: ${brand}\nIndustry: ${industry}\nRequest Type: ${requestType}\nNotes: ${notes}`,
+          ...payload,
+          _template: 'table',
+          _captcha: 'false',
         }),
       });
     } catch (e) {

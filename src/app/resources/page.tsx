@@ -1,123 +1,94 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { Search, Download } from '@/components/Icons';
+import { Search, Download, ArrowRight } from '@/components/Icons';
 import AIAuditWidget from '@/components/AIAuditWidget';
 
 export default function ResourcesPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const resources = [
+  const articles = [
     {
-      id: 1,
-      num: '[01]',
-      category: 'playbook',
-      type: 'GEO Playbook',
-      title: 'The 2026 Generative Engine Optimization Blueprint',
-      description: 'A 45-page technical guide on optimizing content architecture for SearchGPT, Perplexity AI, and Google Gemini.',
-      readTime: '15 MIN READ',
-      date: 'AUG 2026',
+      title: "Why Isn't My Shopify Store Showing Up on Google? (2026 Guide)",
+      path: '/resources/why-shopify-store-not-showing-up-on-google',
+      tag: 'FEATURED PLAYBOOK',
+      byline: 'By Luke Haracic • Updated Aug 2026',
+      desc: 'A full diagnostic for why your Shopify store isn\'t ranking — including duplicate collection parameters, app bloat, and AI search readiness.',
     },
     {
-      id: 2,
-      num: '[02]',
-      category: 'tool',
-      type: 'Developer Tool',
-      title: 'JSON-LD Knowledge Graph Builder & Validator',
-      description: 'Free browser tool to generate schema definitions for Organization, SameAs Wikidata links, and Executive Authors.',
-      readTime: 'INTERACTIVE TOOL',
-      date: 'AUG 2026',
+      title: 'Generative Engine Optimization (GEO) Technical Manual',
+      path: '/generative-engine-optimization',
+      tag: 'TECHNICAL MANUAL',
+      byline: 'By XTRACT Search Team • 2026',
+      desc: 'How query fan-out variant generation works and how to structure your website to get cited across ChatGPT, Perplexity, and Google AI Overviews.',
     },
     {
-      id: 3,
-      num: '[03]',
-      category: 'whitepaper',
-      type: 'Research Report',
-      title: 'How ChatGPT Ranks Software: Analysis of 500,000 Prompts',
-      description: 'Statistical analysis of source citation frequency, domain authority thresholds, and co-occurrence patterns in LLMs.',
-      readTime: '20 MIN READ',
-      date: 'JUL 2026',
-    },
-    {
-      id: 4,
-      num: '[04]',
-      category: 'checklist',
-      type: 'Technical Checklist',
-      title: 'AI Crawler & Robots.txt Governance Audit Checklist',
-      description: 'Audit web server rules to ensure GPTBot, PerplexityBot, and ClaudeBot can safely parse your domain.',
-      readTime: '5 MIN CHECKLIST',
-      date: 'JUN 2026',
+      title: 'SRA & CQC Compliance Rules in Organic Search',
+      path: '/seo-for-law-firms',
+      tag: 'REGULATORY GUIDE',
+      byline: 'By Legal & Healthcare SEO Team • 2026',
+      desc: 'Navigating solicitor advertising regulations and medical YMYL rules without compromising search visibility or client instruction volume.',
     },
   ];
 
-  const filteredResources = resources.filter((res) => {
-    const matchesCategory = selectedCategory === 'all' || res.category === selectedCategory;
-    const matchesSearch = res.title.toLowerCase().includes(searchTerm.toLowerCase()) || res.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
   return (
-    <div style={{ backgroundColor: '#fcfcfc', minHeight: '100vh', paddingTop: '5rem', paddingBottom: '6rem' }}>
+    <div style={{ backgroundColor: '#ffffff', minHeight: '100vh', paddingTop: '5rem', paddingBottom: '6rem' }}>
       {/* Header */}
       <section style={{ marginBottom: '4rem' }}>
         <div className="container">
-          <div className="mono-tag" style={{ marginBottom: '1.5rem' }}>
-            <span className="square-bullet" /> OPEN RESEARCH & TOOLS
+          <div className="soft-pill-tag" style={{ marginBottom: '1.5rem' }}>
+            <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#000000' }} />
+            RESEARCH & PLAYBOOKS
           </div>
           <h1 style={{ fontSize: 'clamp(2.8rem, 5.5vw, 4.5rem)', fontWeight: 800, color: '#000000', letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: '1.5rem' }}>
-            GEO Intelligence Resource Hub.
+            Technical Search & GEO Research Library.
           </h1>
-          <p style={{ fontSize: '1.2rem', color: '#666666', lineHeight: 1.6, maxWidth: '640px' }}>
-            Free technical playbooks, empirical LLM research reports, and schema generators.
+          <p style={{ fontSize: '1.2rem', color: '#666666', lineHeight: 1.6, maxWidth: '680px' }}>
+            In-depth technical guides, e-commerce diagnostics, and regulatory compliance playbooks written for UK founders and marketing directors.
           </p>
         </div>
       </section>
 
-      {/* Filter Bar */}
-      <section>
+      {/* Featured Resource Cards */}
+      <section style={{ marginBottom: '6rem' }}>
         <div className="container">
           <div className="section-bar">
-            <span>(01) REPOSITORY</span>
-            <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-              <span onClick={() => setSelectedCategory('all')} style={{ cursor: 'pointer', color: selectedCategory === 'all' ? '#ff4500' : '#777777' }}>ALL</span>
-              <span onClick={() => setSelectedCategory('playbook')} style={{ cursor: 'pointer', color: selectedCategory === 'playbook' ? '#ff4500' : '#777777' }}>PLAYBOOKS</span>
-              <span onClick={() => setSelectedCategory('whitepaper')} style={{ cursor: 'pointer', color: selectedCategory === 'whitepaper' ? '#ff4500' : '#777777' }}>RESEARCH</span>
-              <span onClick={() => setSelectedCategory('tool')} style={{ cursor: 'pointer', color: selectedCategory === 'tool' ? '#ff4500' : '#777777' }}>TOOLS</span>
-            </div>
+            <span>(01) RECENT PLAYBOOKS & DIAGNOSTICS</span>
+            <span>Technical Guides</span>
           </div>
 
-          {/* Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1.5rem', marginBottom: '6rem' }}>
-            {filteredResources.map((res) => (
-              <div key={res.id} className="grid-card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1.8rem' }}>
+            {articles.map((item, idx) => (
+              <Link
+                key={idx}
+                href={item.path}
+                className="grid-card"
+                style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
+              >
                 <div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1.5rem' }}>
-                    <span className="card-num">{res.num}</span>
-                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: '#888888' }}>{res.date}</span>
-                  </div>
-                  <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#000000', marginBottom: '0.8rem', letterSpacing: '-0.02em', lineHeight: 1.3 }}>
-                    {res.title}
+                  <div className="card-num-pill">{item.tag}</div>
+                  <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#000000', marginBottom: '0.8rem', lineHeight: 1.25 }}>
+                    {item.title}
                   </h3>
-                  <p style={{ color: '#666666', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '2rem' }}>
-                    {res.description}
+                  <div style={{ fontSize: '0.85rem', color: '#666666', fontWeight: 700, marginBottom: '1rem' }}>
+                    {item.byline}
+                  </div>
+                  <p style={{ color: '#555555', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '1.8rem' }}>
+                    {item.desc}
                   </p>
                 </div>
 
-                <div style={{ borderTop: '1px solid #f0f0f0', paddingTop: '1.2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: '#777777' }}>{res.readTime}</span>
-                  <a href="#audit-widget" className="btn btn-outline" style={{ padding: '0.5rem 1rem', fontSize: '0.75rem' }}>ACCESS FREE</a>
+                <div style={{ fontSize: '0.9rem', fontWeight: 800, color: '#000000', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                  Read Full Guide <ArrowRight size={16} />
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Embedded Audit */}
-      <section id="audit-widget">
-        <div className="container" style={{ maxWidth: '900px' }}>
+      {/* Embedded Intake Audit Widget */}
+      <section id="audit">
+        <div className="container" style={{ maxWidth: '920px' }}>
           <AIAuditWidget />
         </div>
       </section>
