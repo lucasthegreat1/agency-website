@@ -17,6 +17,18 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   const retainerItems = [
     {
+      title: 'Generative Engine Optimization (GEO) & AI Visibility',
+      content:
+        "We structure content so it can be accurately found and cited by ChatGPT, Perplexity, Gemini, and Google's AI Overviews — not just ranked in traditional search. This includes structured data, clear answer-first content, query fan-out optimization, and monthly tracking of how you appear across these tools using Profound & Limy analytics.",
+      deliverables: [
+        'Query Fan-Out Optimization',
+        'Structured Data & JSON-LD Microdata',
+        'Profound & Limy AI Tooling Analytics',
+        'Multi-Platform Citation Share Tracking',
+      ],
+      link: '/services/generative-engine-optimization',
+    },
+    {
       title: 'Technical SEO',
       content:
         'We start every engagement with a full technical audit — indexing, crawlability, page speed, mobile experience, and the structural issues (like duplicate collection or filter pages) that quietly cap how well a site can rank, no matter how good the content is.',
@@ -33,13 +45,6 @@ export default function ServicesPage() {
       content:
         'Google Business Profile optimisation, local citation building, and review strategy for businesses that rely on local search — home improvement, healthcare, and similar service-area businesses.',
       deliverables: ['Google Business Profile Optimisation', 'Local Citation Alignment', 'Service Area Keyword Targeting', 'Review Strategy Guidance'],
-    },
-    {
-      title: 'Generative Engine Optimization (GEO) & AI Visibility',
-      content:
-        "We structure content so it can be accurately found and cited by ChatGPT, Perplexity, Gemini, and Google's AI Overviews — not just ranked in traditional search. This includes structured data, clear answer-first content, and monthly tracking of how you appear across these tools. It's still an emerging area, so we treat it as an addition to strong SEO fundamentals, not a replacement for them.",
-      deliverables: ['Structured Data & JSON-LD Microdata', 'Clear Answer-First Content Blocks', 'Query Fan-Out Optimization', 'Monthly Multi-Platform Citation Tracking'],
-      link: '/services/generative-engine-optimization',
     },
     {
       title: 'Reporting',
@@ -111,81 +116,18 @@ export default function ServicesPage() {
             <a href="#audit" className="btn btn-primary" style={{ padding: '1rem 2.2rem' }}>
               Request a Free Audit
             </a>
-            <a href="#geo-section" className="btn btn-outline" style={{ padding: '1rem 2.2rem' }}>
-              See GEO & AI Search Services
+            <a href="#retainer-scope" className="btn btn-outline" style={{ padding: '1rem 2.2rem' }}>
+              See What's Included
             </a>
           </div>
         </div>
       </section>
 
-      {/* SECTION 1: DEDICATED GEO FEATURE SECTION (PLACED AT TOP) */}
-      <section id="geo-section" style={{ marginBottom: '6rem' }}>
-        <div className="container">
-          <div className="section-bar" style={{ borderColor: '#222222', color: '#aaaaaa' }}>
-            <span>(01) GENERATIVE ENGINE OPTIMIZATION (GEO)</span>
-            <span>AI Search Engine Optimization</span>
-          </div>
-
-          <div style={{ backgroundColor: '#111111', border: '1px solid #222222', borderRadius: '24px', padding: 'clamp(2rem, 4vw, 3.5rem)', boxShadow: '0 8px 24px rgba(0, 0, 0, 0.4)' }}>
-            <div className="soft-pill-tag" style={{ marginBottom: '1.2rem', backgroundColor: '#181818', borderColor: '#333333', color: '#ffffff' }}>
-              <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#ffffff' }} />
-              Generative Engine Optimization (GEO)
-            </div>
-
-            <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em', marginBottom: '1.2rem' }}>
-              Get cited and recommended by ChatGPT, Perplexity & Google AI Overviews
-            </h2>
-
-            <p style={{ color: '#aaaaaa', fontSize: '1.05rem', lineHeight: 1.7, marginBottom: '2rem', maxWidth: '820px' }}>
-              Generative Engine Optimization (GEO) — also called Answer Engine Optimization (AEO) — structures your website content so AI tools cite and recommend your brand when customers ask for solutions in your industry. Rather than competing for static blue link clicks, GEO optimizes your digital footprint for AI query fan-out mechanics and entity knowledge graphs.
-            </p>
-
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginBottom: '2.5rem' }}>
-              <div style={{ backgroundColor: '#181818', border: '1px solid #222222', borderRadius: '16px', padding: '1.8rem' }}>
-                <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff', marginBottom: '0.6rem' }}>
-                  Query Fan-Out Mechanics
-                </h3>
-                <p style={{ color: '#aaaaaa', fontSize: '0.92rem', lineHeight: 1.6 }}>
-                  AI search tools break single questions into 8–12 sub-queries. We structure your content to address every sub-query in the fan-out cluster.
-                </p>
-              </div>
-
-              <div style={{ backgroundColor: '#181818', border: '1px solid #222222', borderRadius: '16px', padding: '1.8rem' }}>
-                <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff', marginBottom: '0.6rem' }}>
-                  Entity & Schema Graphs
-                </h3>
-                <p style={{ color: '#aaaaaa', fontSize: '0.92rem', lineHeight: 1.6 }}>
-                  We engineer Schema.org JSON-LD semantic architecture connecting your site to recognized Knowledge Graph entity nodes.
-                </p>
-              </div>
-
-              <div style={{ backgroundColor: '#181818', border: '1px solid #222222', borderRadius: '16px', padding: '1.8rem' }}>
-                <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff', marginBottom: '0.6rem' }}>
-                  Profound & Limy Tooling
-                </h3>
-                <p style={{ color: '#aaaaaa', fontSize: '0.92rem', lineHeight: 1.6 }}>
-                  We use enterprise AI tools like Profound and Limy to monitor live prompt citation shares and LLM crawler access logs.
-                </p>
-              </div>
-            </div>
-
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-              <Link href="/services/generative-engine-optimization" className="btn btn-primary" style={{ padding: '1rem 2.2rem' }}>
-                Explore Dedicated GEO Service Page <ArrowRight size={16} />
-              </Link>
-              <a href="#audit" className="btn btn-outline" style={{ padding: '1rem 2.2rem' }}>
-                Request Free AI Search Audit
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 2: WHAT'S INCLUDED IN EVERY RETAINER */}
+      {/* WHAT'S INCLUDED IN EVERY RETAINER */}
       <section id="retainer-scope" style={{ marginBottom: '6rem' }}>
         <div className="container">
           <div className="section-bar" style={{ borderColor: '#222222', color: '#aaaaaa' }}>
-            <span>(02) RETAINER SCOPE</span>
+            <span>(01) RETAINER SCOPE</span>
             <span>What's Included in Every Retainer</span>
           </div>
 
@@ -256,11 +198,11 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* SECTION 3: FAQS SECTION */}
+      {/* FAQS SECTION */}
       <section style={{ marginBottom: '6rem' }}>
         <div className="container">
           <div className="section-bar" style={{ borderColor: '#222222', color: '#aaaaaa' }}>
-            <span>(03) FREQUENTLY ASKED QUESTIONS</span>
+            <span>(02) FREQUENTLY ASKED QUESTIONS</span>
             <span>Honest Answers</span>
           </div>
 
