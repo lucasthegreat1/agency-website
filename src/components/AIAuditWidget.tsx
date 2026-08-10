@@ -55,25 +55,25 @@ export default function AIAuditWidget() {
     <div
       id="audit"
       style={{
-        backgroundColor: '#ffffff',
-        border: '1px solid #e5e5e5',
+        backgroundColor: '#111111',
+        border: '1px solid #222222',
         borderRadius: '24px',
         padding: 'clamp(1.75rem, 4vw, 3.5rem)',
-        boxShadow: '0 8px 24px rgba(0, 0, 0, 0.04)',
-        color: '#000000',
+        boxShadow: '0 8px 24px rgba(0, 0, 0, 0.5)',
+        color: '#ffffff',
       }}
     >
       {!submitted ? (
         <div>
-          <div className="soft-pill-tag" style={{ marginBottom: '1.2rem' }}>
-            <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#000000' }} />
+          <div className="soft-pill-tag" style={{ marginBottom: '1.2rem', backgroundColor: '#181818', borderColor: '#333333', color: '#ffffff' }}>
+            <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#ffffff' }} />
             Free Audit & Strategy Meeting Request
           </div>
 
-          <h3 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.4rem)', fontWeight: 800, color: '#000000', letterSpacing: '-0.02em', marginBottom: '0.8rem' }}>
+          <h3 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.4rem)', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em', marginBottom: '0.8rem' }}>
             Request a Free Website Audit or Meeting
           </h3>
-          <p style={{ color: '#555555', fontSize: '0.98rem', marginBottom: '2.2rem', lineHeight: 1.6, maxWidth: '680px' }}>
+          <p style={{ color: '#aaaaaa', fontSize: '0.98rem', marginBottom: '2.2rem', lineHeight: 1.6, maxWidth: '680px' }}>
             Enter your domain and details below. Submitting will send your request straight to <strong>info.xtractagency@gmail.com</strong>.
           </p>
 
@@ -84,7 +84,7 @@ export default function AIAuditWidget() {
           >
             {/* Website URL */}
             <div style={{ gridColumn: 'span 2' }} className="full-width-col">
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 800, color: '#000000', letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 800, color: '#ffffff', letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
                 WEBSITE URL *
               </label>
               <div style={{ position: 'relative' }}>
@@ -97,12 +97,12 @@ export default function AIAuditWidget() {
                   style={{
                     width: '100%',
                     padding: '0.95rem 1rem 0.95rem 2.6rem',
-                    border: '1.5px solid #e5e5e5',
+                    border: '1.5px solid #333333',
                     borderRadius: '12px',
                     fontSize: '0.95rem',
                     outline: 'none',
-                    backgroundColor: '#f8f8f8',
-                    color: '#000000',
+                    backgroundColor: '#181818',
+                    color: '#ffffff',
                     fontFamily: 'var(--font-sans)',
                   }}
                 />
@@ -112,7 +112,7 @@ export default function AIAuditWidget() {
 
             {/* Full Name */}
             <div className="full-width-col">
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 800, color: '#000000', letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 800, color: '#ffffff', letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
                 FULL NAME *
               </label>
               <input
@@ -124,19 +124,19 @@ export default function AIAuditWidget() {
                 style={{
                   width: '100%',
                   padding: '0.95rem 1rem',
-                  border: '1.5px solid #e5e5e5',
+                  border: '1.5px solid #333333',
                   borderRadius: '12px',
                   fontSize: '0.95rem',
                   outline: 'none',
-                  backgroundColor: '#f8f8f8',
-                  color: '#000000',
+                  backgroundColor: '#181818',
+                  color: '#ffffff',
                 }}
               />
             </div>
 
             {/* Work Email */}
             <div className="full-width-col">
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 800, color: '#000000', letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 800, color: '#ffffff', letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
                 WORK EMAIL *
               </label>
               <input
@@ -148,19 +148,19 @@ export default function AIAuditWidget() {
                 style={{
                   width: '100%',
                   padding: '0.95rem 1rem',
-                  border: '1.5px solid #e5e5e5',
+                  border: '1.5px solid #333333',
                   borderRadius: '12px',
                   fontSize: '0.95rem',
                   outline: 'none',
-                  backgroundColor: '#f8f8f8',
-                  color: '#000000',
+                  backgroundColor: '#181818',
+                  color: '#ffffff',
                 }}
               />
             </div>
 
             {/* Company / Brand Name */}
             <div className="full-width-col">
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 800, color: '#000000', letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 800, color: '#ffffff', letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
                 COMPANY / BRAND NAME
               </label>
               <input
@@ -171,19 +171,19 @@ export default function AIAuditWidget() {
                 style={{
                   width: '100%',
                   padding: '0.95rem 1rem',
-                  border: '1.5px solid #e5e5e5',
+                  border: '1.5px solid #333333',
                   borderRadius: '12px',
                   fontSize: '0.95rem',
                   outline: 'none',
-                  backgroundColor: '#f8f8f8',
-                  color: '#000000',
+                  backgroundColor: '#181818',
+                  color: '#ffffff',
                 }}
               />
             </div>
 
             {/* Industry Sector */}
             <div className="full-width-col">
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 800, color: '#000000', letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 800, color: '#ffffff', letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
                 INDUSTRY SECTOR
               </label>
               <select
@@ -192,12 +192,12 @@ export default function AIAuditWidget() {
                 style={{
                   width: '100%',
                   padding: '0.95rem 1rem',
-                  border: '1.5px solid #e5e5e5',
+                  border: '1.5px solid #333333',
                   borderRadius: '12px',
                   fontSize: '0.95rem',
                   outline: 'none',
-                  backgroundColor: '#f8f8f8',
-                  color: '#000000',
+                  backgroundColor: '#181818',
+                  color: '#ffffff',
                 }}
               >
                 <option value="UK Law Firms">UK Law Firms</option>
@@ -212,7 +212,7 @@ export default function AIAuditWidget() {
 
             {/* Request Type */}
             <div style={{ gridColumn: 'span 2' }} className="full-width-col">
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 800, color: '#000000', letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '0.6rem' }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 800, color: '#ffffff', letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '0.6rem' }}>
                 WHAT WOULD YOU LIKE TO REQUEST?
               </label>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '0.8rem' }}>
@@ -228,10 +228,10 @@ export default function AIAuditWidget() {
                     style={{
                       padding: '0.8rem 1rem',
                       borderRadius: '12px',
-                      border: requestType === type ? '2px solid #000000' : '1px solid #e5e5e5',
-                      backgroundColor: requestType === type ? '#000000' : '#f8f8f8',
-                      color: requestType === type ? '#ffffff' : '#000000',
-                      fontWeight: 700,
+                      border: requestType === type ? '2px solid #ffffff' : '1px solid #333333',
+                      backgroundColor: requestType === type ? '#ffffff' : '#181818',
+                      color: requestType === type ? '#000000' : '#ffffff',
+                      fontWeight: 800,
                       fontSize: '0.88rem',
                       cursor: 'pointer',
                       textAlign: 'center',
@@ -245,7 +245,7 @@ export default function AIAuditWidget() {
 
             {/* Additional Notes */}
             <div style={{ gridColumn: 'span 2' }} className="full-width-col">
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 800, color: '#000000', letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 800, color: '#ffffff', letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
                 ADDITIONAL NOTES / SPECIFIC GOALS (OPTIONAL)
               </label>
               <textarea
@@ -256,12 +256,12 @@ export default function AIAuditWidget() {
                 style={{
                   width: '100%',
                   padding: '0.95rem 1rem',
-                  border: '1.5px solid #e5e5e5',
+                  border: '1.5px solid #333333',
                   borderRadius: '12px',
                   fontSize: '0.95rem',
                   outline: 'none',
-                  backgroundColor: '#f8f8f8',
-                  color: '#000000',
+                  backgroundColor: '#181818',
+                  color: '#ffffff',
                   fontFamily: 'var(--font-sans)',
                   resize: 'vertical',
                 }}

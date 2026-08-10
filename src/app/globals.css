@@ -1,23 +1,23 @@
 :root {
-  --bg-primary: #ffffff;
-  --bg-surface: #ffffff;
-  --bg-secondary: #f8f8f8;
+  --bg-primary: #000000;
+  --bg-surface: #111111;
+  --bg-secondary: #181818;
   --bg-dark: #000000;
   --bg-dark-card: #111111;
   
-  --text-main: #000000;
-  --text-muted: #555555;
-  --text-light: #888888;
+  --text-main: #ffffff;
+  --text-muted: #aaaaaa;
+  --text-light: #777777;
   --text-white: #ffffff;
   
-  --brand-accent: #000000;
-  --brand-accent-hover: #222222;
-  --brand-accent-light: #f0f0f0;
-  --brand-underline: #000000;
+  --brand-accent: #ffffff;
+  --brand-accent-hover: #dddddd;
+  --brand-accent-light: #181818;
+  --brand-underline: #ffffff;
   
-  --border-light: #e5e5e5;
-  --border-subtle: #f0f0f0;
-  --border-dark: #222222;
+  --border-light: #222222;
+  --border-subtle: #333333;
+  --border-dark: #444444;
   
   --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-mono: SFMono-Regular, Menual, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -27,8 +27,8 @@
   --radius-lg: 20px;
   --radius-pill: 9999px;
   
-  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.04);
-  --shadow-medium: 0 16px 36px rgba(0, 0, 0, 0.08);
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-medium: 0 16px 36px rgba(0, 0, 0, 0.6);
 }
 
 * {
@@ -85,10 +85,10 @@ img, svg, video {
   align-items: center;
   gap: 0.5rem;
   padding: 0.45rem 1.1rem;
-  background-color: #f0f0f0;
-  border: 1px solid #dcdcdc;
+  background-color: #111111;
+  border: 1px solid #222222;
   border-radius: var(--radius-pill);
-  color: #000000;
+  color: #ffffff;
   font-size: 0.85rem;
   font-weight: 700;
   max-width: 100%;
@@ -107,8 +107,8 @@ img, svg, video {
   left: 0;
   right: 0;
   height: 6px;
-  background-color: #000000;
-  opacity: 0.15;
+  background-color: #ffffff;
+  opacity: 0.25;
   z-index: -1;
   border-radius: 3px;
 }
@@ -146,7 +146,7 @@ img, svg, video {
   gap: 0.6rem;
   padding: 0.9rem 2rem;
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: 800;
   border-radius: var(--radius-pill);
   transition: all 0.25s ease;
   cursor: pointer;
@@ -164,24 +164,24 @@ img, svg, video {
 }
 
 .btn-primary {
-  background-color: #000000;
-  color: #ffffff;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
 }
 .btn-primary:hover {
-  background-color: #333333;
-  color: #ffffff;
+  background-color: #dddddd;
+  color: #000000;
   transform: translateY(-2px);
 }
 
 .btn-outline {
   background-color: transparent;
-  color: #000000;
-  border: 2px solid #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
 }
 .btn-outline:hover {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
   transform: translateY(-2px);
 }
 
@@ -203,7 +203,7 @@ img, svg, video {
 }
 
 .grid-card:hover {
-  border-color: #000000;
+  border-color: #ffffff;
   transform: translateY(-4px);
   box-shadow: var(--shadow-medium);
 }
@@ -211,11 +211,11 @@ img, svg, video {
 .card-num-pill {
   display: inline-block;
   padding: 0.3rem 0.8rem;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
   border-radius: var(--radius-pill);
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 1.2rem;
 }
 

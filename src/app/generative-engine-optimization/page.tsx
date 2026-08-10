@@ -179,25 +179,25 @@ export default function GeoServicePage() {
       {/* SECTION 1: WHAT IS GEO? */}
       <section style={{ marginBottom: '6rem' }}>
         <div className="container">
-          <div className="section-bar">
+          <div className="section-bar" style={{ borderColor: '#222222', color: '#aaaaaa' }}>
             <span>(01) DEFINITION & CORE MECHANICS</span>
             <span>SEO vs GEO Explained</span>
           </div>
 
-          <div style={{ backgroundColor: '#ffffff', border: '1px solid #e5e5e5', borderRadius: '24px', padding: 'clamp(2rem, 4vw, 3.5rem)', boxShadow: '0 8px 24px rgba(0, 0, 0, 0.04)' }}>
-            <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 800, color: '#000000', letterSpacing: '-0.02em', marginBottom: '1.5rem' }}>
+          <div style={{ backgroundColor: '#111111', border: '1px solid #222222', borderRadius: '24px', padding: 'clamp(2rem, 4vw, 3.5rem)', boxShadow: '0 8px 24px rgba(0, 0, 0, 0.4)' }}>
+            <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em', marginBottom: '1.5rem' }}>
               What is GEO?
             </h2>
             
-            <p style={{ fontSize: '1.1rem', color: '#333333', lineHeight: 1.7, marginBottom: '1.5rem', fontWeight: 600 }}>
+            <p style={{ fontSize: '1.1rem', color: '#ffffff', lineHeight: 1.7, marginBottom: '1.5rem', fontWeight: 600 }}>
               Generative Engine Optimization (GEO) — also called AEO (Answer Engine Optimization) or AI search optimization — is the practice of structuring your content so AI tools like ChatGPT, Perplexity, Gemini, and Google's AI Overviews cite you when they answer a question.
             </p>
 
-            <p style={{ color: '#555555', fontSize: '1.02rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
+            <p style={{ color: '#aaaaaa', fontSize: '1.02rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
               Traditional SEO gets you a ranked position in a list of blue links. GEO is different: instead of getting a click, you're aiming to be one of the sources an AI system pulls from, summarises, and names when it answers someone's question directly — often without the user visiting any website at all.
             </p>
 
-            <div style={{ backgroundColor: '#f8f8f8', borderLeft: '4px solid #000000', borderRadius: '12px', padding: '1.5rem', fontSize: '1rem', color: '#000000', fontWeight: 600 }}>
+            <div style={{ backgroundColor: '#181818', borderLeft: '4px solid #ffffff', borderRadius: '12px', padding: '1.5rem', fontSize: '1rem', color: '#ffffff', fontWeight: 600 }}>
               Both matter, but they require different work, which is why GEO sits alongside your SEO strategy rather than replacing it.
             </div>
           </div>
@@ -207,29 +207,29 @@ export default function GeoServicePage() {
       {/* SECTION 2: HOW AI SEARCH WORKS - QUERY FAN-OUT */}
       <section id="how-geo-works" style={{ marginBottom: '6rem' }}>
         <div className="container">
-          <div className="section-bar">
+          <div className="section-bar" style={{ borderColor: '#222222', color: '#aaaaaa' }}>
             <span>(02) TECHNICAL ARCHITECTURE</span>
             <span>Query Fan-Out Mechanism</span>
           </div>
 
-          <div style={{ backgroundColor: '#ffffff', border: '1px solid #e5e5e5', borderRadius: '24px', padding: 'clamp(2rem, 4vw, 3.5rem)' }}>
-            <div className="soft-pill-tag" style={{ marginBottom: '1.2rem' }}>
+          <div style={{ backgroundColor: '#111111', border: '1px solid #222222', borderRadius: '24px', padding: 'clamp(2rem, 4vw, 3.5rem)' }}>
+            <div className="soft-pill-tag" style={{ marginBottom: '1.2rem', backgroundColor: '#181818', borderColor: '#333333', color: '#ffffff' }}>
               Algorithm Mechanics
             </div>
-            <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 800, color: '#000000', letterSpacing: '-0.02em', marginBottom: '1.5rem' }}>
+            <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em', marginBottom: '1.5rem' }}>
               How AI search actually works: query fan-out
             </h2>
 
-            <p style={{ color: '#555555', fontSize: '1.05rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
+            <p style={{ color: '#aaaaaa', fontSize: '1.05rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
               The mechanism behind almost every AI search tool today is called <strong>query fan-out</strong> (Google's own patent calls it "query variant generation," but "fan-out" is the term that's stuck in the industry).
             </p>
 
-            <p style={{ color: '#555555', fontSize: '1.05rem', lineHeight: 1.7, marginBottom: '2rem' }}>
+            <p style={{ color: '#aaaaaa', fontSize: '1.05rem', lineHeight: 1.7, marginBottom: '2rem' }}>
               Here's what happens: when someone asks an AI tool a question, the system doesn't just search for that one phrase. It uses a language model to break the question apart into a set of related sub-queries — often somewhere between 8 and 12 — covering different angles, intents, and follow-up questions the person didn't explicitly ask but likely cares about. Each sub-query is run separately, the results are gathered, and the AI synthesises everything into one combined answer.
             </p>
 
             {/* Example Box */}
-            <div style={{ backgroundColor: '#000000', color: '#ffffff', borderRadius: '20px', padding: '2rem', marginBottom: '2rem' }}>
+            <div style={{ backgroundColor: '#000000', border: '1px solid #222222', color: '#ffffff', borderRadius: '20px', padding: '2rem', marginBottom: '2rem' }}>
               <div style={{ fontSize: '0.82rem', fontWeight: 800, color: '#aaaaaa', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.8rem' }}>
                 REAL WORLD EXAMPLE
               </div>
@@ -244,11 +244,11 @@ export default function GeoServicePage() {
               </ul>
             </div>
 
-            <p style={{ color: '#555555', fontSize: '1.02rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
+            <p style={{ color: '#aaaaaa', fontSize: '1.02rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
               This is why GEO is fundamentally different from traditional keyword targeting. In classic SEO, visibility is binary — you either rank on page one for a keyword or you don't. In AI search, visibility is closer to probabilistic: your site might not rank for the main phrase someone typed, but if you cover one of the underlying sub-queries particularly well, you can still get pulled into the answer. Conversely, ranking well on Google doesn't guarantee you're cited by AI — many AI-cited sources aren't the top-ranked page for the original search term at all.
             </p>
 
-            <p style={{ color: '#555555', fontSize: '1.02rem', lineHeight: 1.7 }}>
+            <p style={{ color: '#aaaaaa', fontSize: '1.02rem', lineHeight: 1.7 }}>
               This is also why comprehensive coverage of a topic matters more in GEO than chasing a single exact keyword. Content that answers the full cluster of questions around a topic — not just one phrase — has more surface area to get picked up across the fan-out.
             </p>
           </div>
@@ -258,16 +258,16 @@ export default function GeoServicePage() {
       {/* SECTION 3: GEO VS SEO COMPARISON TABLE */}
       <section style={{ marginBottom: '6rem' }}>
         <div className="container">
-          <div className="section-bar">
+          <div className="section-bar" style={{ borderColor: '#222222', color: '#aaaaaa' }}>
             <span>(03) STRATEGIC ALIGNMENT</span>
             <span>GEO vs SEO Comparison</span>
           </div>
 
-          <div style={{ backgroundColor: '#ffffff', border: '1px solid #e5e5e5', borderRadius: '24px', padding: 'clamp(2rem, 4vw, 3.5rem)' }}>
-            <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 800, color: '#000000', letterSpacing: '-0.02em', marginBottom: '1rem' }}>
+          <div style={{ backgroundColor: '#111111', border: '1px solid #222222', borderRadius: '24px', padding: 'clamp(2rem, 4vw, 3.5rem)' }}>
+            <h2 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em', marginBottom: '1rem' }}>
               GEO vs SEO — how they relate
             </h2>
-            <p style={{ color: '#555555', fontSize: '1.05rem', marginBottom: '2.5rem' }}>
+            <p style={{ color: '#aaaaaa', fontSize: '1.05rem', marginBottom: '2.5rem' }}>
               They're complementary, not competing. Good GEO is built on good SEO — a technically broken, poorly structured site won't perform well in either.
             </p>
 
@@ -275,7 +275,7 @@ export default function GeoServicePage() {
             <div style={{ overflowX: 'auto', marginBottom: '2.5rem' }}>
               <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', minWidth: '600px' }}>
                 <thead>
-                  <tr style={{ backgroundColor: '#000000', color: '#ffffff' }}>
+                  <tr style={{ backgroundColor: '#000000', color: '#ffffff', borderBottom: '1px solid #333333' }}>
                     <th style={{ padding: '1.2rem 1.5rem', borderRadius: '16px 0 0 0', width: '20%', fontSize: '0.9rem', textTransform: 'uppercase' }}>Dimension</th>
                     <th style={{ padding: '1.2rem 1.5rem', width: '40%', fontSize: '0.9rem', textTransform: 'uppercase' }}>Traditional SEO</th>
                     <th style={{ padding: '1.2rem 1.5rem', borderRadius: '0 16px 0 0', width: '40%', fontSize: '0.9rem', textTransform: 'uppercase' }}>Generative Engine Optimization (GEO)</th>
@@ -283,17 +283,17 @@ export default function GeoServicePage() {
                 </thead>
                 <tbody>
                   {comparisonData.map((row, idx) => (
-                    <tr key={idx} style={{ borderBottom: '1px solid #e5e5e5', backgroundColor: idx % 2 === 0 ? '#ffffff' : '#f8f8f8' }}>
-                      <td style={{ padding: '1.2rem 1.5rem', fontWeight: 800, color: '#000000', fontSize: '0.95rem' }}>{row.label}</td>
-                      <td style={{ padding: '1.2rem 1.5rem', color: '#555555', fontSize: '0.95rem' }}>{row.seo}</td>
-                      <td style={{ padding: '1.2rem 1.5rem', fontWeight: 700, color: '#000000', fontSize: '0.95rem' }}>{row.geo}</td>
+                    <tr key={idx} style={{ borderBottom: '1px solid #222222', backgroundColor: idx % 2 === 0 ? '#111111' : '#181818' }}>
+                      <td style={{ padding: '1.2rem 1.5rem', fontWeight: 800, color: '#ffffff', fontSize: '0.95rem' }}>{row.label}</td>
+                      <td style={{ padding: '1.2rem 1.5rem', color: '#aaaaaa', fontSize: '0.95rem' }}>{row.seo}</td>
+                      <td style={{ padding: '1.2rem 1.5rem', fontWeight: 700, color: '#ffffff', fontSize: '0.95rem' }}>{row.geo}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
 
-            <p style={{ color: '#555555', fontSize: '1rem', lineHeight: 1.65 }}>
+            <p style={{ color: '#aaaaaa', fontSize: '1rem', lineHeight: 1.65 }}>
               That's why we treat this as one connected strategy, not two separate services.
             </p>
           </div>

@@ -70,7 +70,7 @@ export default function SeoGeoProcessTimeline({ industryName }: { industryName?:
           top: '3rem',
           bottom: '3rem',
           width: '2px',
-          backgroundColor: '#000000',
+          backgroundColor: '#ffffff',
           transform: 'translateX(-50%)',
           zIndex: 1,
         }}
@@ -92,21 +92,21 @@ export default function SeoGeoProcessTimeline({ industryName }: { industryName?:
             <div style={{ paddingRight: step.side === 'left' ? '2.5rem' : '0', paddingLeft: step.side === 'right' ? '2.5rem' : '0', gridColumn: step.side === 'left' ? '1' : '3' }}>
               <div
                 style={{
-                  backgroundColor: '#ffffff',
-                  border: '1px solid #e5e5e5',
+                  backgroundColor: '#111111',
+                  border: '1px solid #222222',
                   borderRadius: '20px',
                   padding: '2.5rem',
-                  boxShadow: '0 8px 24px rgba(0, 0, 0, 0.04)',
+                  boxShadow: '0 8px 24px rgba(0, 0, 0, 0.4)',
                 }}
               >
-                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', fontWeight: 800, color: '#666666', letterSpacing: '0.08em', marginBottom: '0.5rem' }}>
+                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', fontWeight: 800, color: '#aaaaaa', letterSpacing: '0.08em', marginBottom: '0.5rem' }}>
                   [STEP {step.num}]
                 </div>
                 <h3
                   style={{
                     fontSize: '1.4rem',
                     fontWeight: 900,
-                    color: '#000000',
+                    color: '#ffffff',
                     letterSpacing: '-0.02em',
                     lineHeight: 1.2,
                     marginBottom: '1rem',
@@ -115,19 +115,19 @@ export default function SeoGeoProcessTimeline({ industryName }: { industryName?:
                 >
                   {step.title}
                 </h3>
-                <p style={{ color: '#555555', fontSize: '0.98rem', lineHeight: 1.65, marginBottom: '1.2rem' }}>
+                <p style={{ color: '#aaaaaa', fontSize: '0.98rem', lineHeight: 1.65, marginBottom: '1.2rem' }}>
                   {step.description}
                 </p>
-                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.92rem', color: '#000000', marginBottom: step.extraText ? '1.2rem' : '0' }}>
+                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.92rem', color: '#ffffff', marginBottom: step.extraText ? '1.2rem' : '0' }}>
                   {step.bullets.map((b, i) => (
                     <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', lineHeight: 1.5 }}>
-                      <span style={{ fontWeight: 900, color: '#000000' }}>•</span>
+                      <span style={{ fontWeight: 900, color: '#ffffff' }}>•</span>
                       <span>{b}</span>
                     </li>
                   ))}
                 </ul>
                 {step.extraText && (
-                  <p style={{ color: '#555555', fontSize: '0.95rem', lineHeight: 1.65, paddingTop: '0.5rem', borderTop: '1px solid #f0f0f0' }}>
+                  <p style={{ color: '#aaaaaa', fontSize: '0.95rem', lineHeight: 1.65, paddingTop: '0.8rem', borderTop: '1px solid #222222' }}>
                     {step.extraText}
                   </p>
                 )}
@@ -141,9 +141,9 @@ export default function SeoGeoProcessTimeline({ industryName }: { industryName?:
                   width: '14px',
                   height: '14px',
                   borderRadius: '50%',
-                  backgroundColor: '#000000',
-                  border: '4px solid #ffffff',
-                  boxShadow: '0 0 0 2px #000000',
+                  backgroundColor: '#ffffff',
+                  border: '4px solid #000000',
+                  boxShadow: '0 0 0 2px #ffffff',
                 }}
               />
             </div>

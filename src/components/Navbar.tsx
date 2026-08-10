@@ -24,14 +24,14 @@ export default function Navbar() {
         position: 'sticky',
         top: 0,
         zIndex: 50,
-        backgroundColor: '#ffffff',
-        borderBottom: '1px solid #e5e5e5',
+        backgroundColor: '#000000',
+        borderBottom: '1px solid #111111',
       }}
     >
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '80px' }}>
-        {/* Crisp Vector Pure Black Logo */}
+        {/* Pure White Vector Logo */}
         <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-          <Logo color="#000000" height={34} />
+          <Logo color="#ffffff" height={34} />
         </Link>
 
         {/* Desktop Nav Links */}
@@ -45,7 +45,7 @@ export default function Navbar() {
                 style={{
                   fontSize: '0.95rem',
                   fontWeight: isActive ? 800 : 600,
-                  color: '#000000',
+                  color: '#ffffff',
                   transition: 'opacity 0.2s ease',
                   opacity: isActive ? 1 : 0.7,
                   padding: '0.4rem 0',
@@ -61,7 +61,7 @@ export default function Navbar() {
                       left: 0,
                       right: 0,
                       height: '3px',
-                      backgroundColor: '#000000',
+                      backgroundColor: '#ffffff',
                       borderRadius: '2px',
                     }}
                   />
@@ -85,7 +85,7 @@ export default function Navbar() {
               border: 'none',
               cursor: 'pointer',
               display: 'none',
-              color: '#000000',
+              color: '#ffffff',
             }}
             className="mobile-toggle"
           >
@@ -103,13 +103,13 @@ export default function Navbar() {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: '#ffffff',
+            backgroundColor: '#000000',
             padding: '2rem',
             display: 'flex',
             flexDirection: 'column',
             gap: '1.5rem',
             zIndex: 40,
-            borderTop: '1px solid #e5e5e5',
+            borderTop: '1px solid #222222',
           }}
         >
           {navItems.map((item) => (
@@ -120,9 +120,9 @@ export default function Navbar() {
               style={{
                 fontSize: '1.2rem',
                 fontWeight: 700,
-                color: '#000000',
+                color: '#ffffff',
                 paddingBottom: '0.8rem',
-                borderBottom: '1px solid #e5e5e5',
+                borderBottom: '1px solid #222222',
                 opacity: pathname === item.href ? 1 : 0.6,
               }}
             >
