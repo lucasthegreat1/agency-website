@@ -14,41 +14,69 @@ export default function HomePage() {
   const estimatedRevenueGain = estimatedLeadIncrease * avgCustomerValue;
 
   return (
-    <div style={{ backgroundColor: '#ffffff', color: '#000000', minHeight: '100vh' }}>
+    <div style={{ backgroundColor: '#000000', color: '#ffffff', minHeight: '100vh' }}>
       {/* HERO SECTION */}
-      <section style={{ paddingTop: 'clamp(3rem, 7vw, 5.5rem)', paddingBottom: 'clamp(3.5rem, 8vw, 6.5rem)' }}>
+      <section style={{ paddingTop: 'clamp(3.5rem, 7vw, 6rem)', paddingBottom: 'clamp(4rem, 8vw, 7rem)' }}>
         <div className="container">
-          {/* Soft Pill Tag */}
-          <div className="soft-pill-tag" style={{ marginBottom: '1.8rem' }}>
-            <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#000000' }} />
+          {/* Sleek Dark Soft Pill Tag */}
+          <div
+            className="soft-pill-tag"
+            style={{
+              marginBottom: '1.8rem',
+              backgroundColor: '#111111',
+              borderColor: '#222222',
+              color: '#ffffff',
+            }}
+          >
+            <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#ffffff' }} />
             Personalised search plans to meet your needs
           </div>
 
           <div className="hero-grid" style={{ display: 'grid', gridTemplateColumns: '1.25fr 0.75fr', gap: '3rem', alignItems: 'center' }}>
             <div>
-              {/* Soft Rounded Headline with Mint Underline */}
+              {/* Bold White Headline */}
               <h1
                 style={{
-                  fontSize: 'clamp(2.2rem, 5.5vw, 4.8rem)',
-                  fontWeight: 800,
-                  letterSpacing: '-0.03em',
-                  lineHeight: 1.08,
-                  color: '#000000',
+                  fontSize: 'clamp(2.4rem, 5.8vw, 5rem)',
+                  fontWeight: 900,
+                  letterSpacing: '-0.04em',
+                  lineHeight: 1.05,
+                  color: '#ffffff',
                   marginBottom: '1.8rem',
                 }}
               >
-                <span className="mint-underline">Get more clients</span> from search.
+                <span
+                  style={{
+                    position: 'relative',
+                    display: 'inline-block',
+                  }}
+                >
+                  Get more clients
+                  <span
+                    style={{
+                      position: 'absolute',
+                      bottom: '6px',
+                      left: 0,
+                      right: 0,
+                      height: '8px',
+                      backgroundColor: '#ffffff',
+                      opacity: 0.25,
+                      borderRadius: '4px',
+                    }}
+                  />
+                </span>{' '}
+                from search.
               </h1>
 
               {/* Subheadline Paragraph */}
               <p
                 style={{
-                  fontSize: 'clamp(1.05rem, 2.2vw, 1.25rem)',
-                  color: '#555555',
+                  fontSize: 'clamp(1.08rem, 2.2vw, 1.25rem)',
+                  color: '#aaaaaa',
                   lineHeight: 1.65,
-                  maxWidth: '600px',
+                  maxWidth: '620px',
                   fontWeight: 500,
-                  marginBottom: '2rem',
+                  marginBottom: '2.2rem',
                 }}
               >
                 Specialist UK SEO built for law firms, healthcare, home improvement, industrial B2B, private education, and Shopify e-commerce brands.
@@ -56,14 +84,14 @@ export default function HomePage() {
 
               {/* Bullet points with checkmarks */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2.5rem' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontSize: 'clamp(0.95rem, 1.8vw, 1.05rem)', fontWeight: 600, color: '#000000' }}>
-                  <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#000000', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', flexShrink: 0, fontWeight: 800, fontSize: '0.8rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontSize: 'clamp(0.95rem, 1.8vw, 1.05rem)', fontWeight: 600, color: '#ffffff' }}>
+                  <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#000000', flexShrink: 0, fontWeight: 900, fontSize: '0.85rem' }}>
                     ✓
                   </div>
                   <span>Legal, Healthcare, Home Improvement, B2B & Shopify E-Commerce SEO</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontSize: 'clamp(0.95rem, 1.8vw, 1.05rem)', fontWeight: 600, color: '#000000' }}>
-                  <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#000000', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', flexShrink: 0, fontWeight: 800, fontSize: '0.8rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontSize: 'clamp(0.95rem, 1.8vw, 1.05rem)', fontWeight: 600, color: '#ffffff' }}>
+                  <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#000000', flexShrink: 0, fontWeight: 900, fontSize: '0.85rem' }}>
                     ✓
                   </div>
                   <span>Regulatory-compliant copy (SRA, CQC & YMYL rules)</span>
@@ -72,21 +100,41 @@ export default function HomePage() {
 
               {/* Action Buttons */}
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                <a href="#audit-section" className="btn btn-primary" style={{ padding: '1rem 2.2rem' }}>
+                <a
+                  href="#audit-section"
+                  className="btn"
+                  style={{
+                    backgroundColor: '#ffffff',
+                    color: '#000000',
+                    padding: '1rem 2.2rem',
+                    fontWeight: 800,
+                    boxShadow: '0 8px 24px rgba(255, 255, 255, 0.15)',
+                  }}
+                >
                   Book a Free SEO Audit
                 </a>
-                <Link href="/industries" className="btn btn-outline" style={{ padding: '1rem 2.2rem' }}>
+                <Link
+                  href="/industries"
+                  className="btn"
+                  style={{
+                    backgroundColor: 'transparent',
+                    color: '#ffffff',
+                    border: '2px solid #ffffff',
+                    padding: '1rem 2.2rem',
+                    fontWeight: 800,
+                  }}
+                >
                   Explore Industry Pages
                 </Link>
               </div>
             </div>
 
             {/* Right Stat Card */}
-            <div style={{ backgroundColor: '#000000', color: '#ffffff', borderRadius: '24px', padding: 'clamp(2rem, 4vw, 3rem)', boxShadow: '0 16px 36px rgba(0, 0, 0, 0.15)' }}>
-              <div style={{ fontSize: '0.85rem', fontWeight: 800, color: '#aaaaaa', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '1rem' }}>
+            <div style={{ backgroundColor: '#111111', border: '1px solid #222222', color: '#ffffff', borderRadius: '24px', padding: 'clamp(2rem, 4vw, 3rem)', boxShadow: '0 16px 40px rgba(0, 0, 0, 0.5)' }}>
+              <div style={{ fontSize: '0.82rem', fontWeight: 800, color: '#aaaaaa', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '1rem' }}>
                 MARKET DOMINANCE COHORT
               </div>
-              <div style={{ fontSize: 'clamp(3rem, 6vw, 4.2rem)', fontWeight: 900, color: '#ffffff', lineHeight: 1, marginBottom: '1rem' }}>
+              <div style={{ fontSize: 'clamp(3.2rem, 6vw, 4.5rem)', fontWeight: 900, color: '#ffffff', lineHeight: 1, marginBottom: '1rem' }}>
                 +340%
               </div>
               <p style={{ fontSize: '0.95rem', color: '#cccccc', lineHeight: 1.6, marginBottom: '2rem' }}>
@@ -103,9 +151,9 @@ export default function HomePage() {
       </section>
 
       {/* SECTION BAR: UK INDUSTRY VERTICALS */}
-      <section style={{ paddingBottom: 'clamp(3.5rem, 8vw, 6.5rem)' }}>
+      <section style={{ paddingBottom: 'clamp(4rem, 8vw, 7rem)' }}>
         <div className="container">
-          <div className="section-bar">
+          <div className="section-bar" style={{ borderColor: '#222222', color: '#aaaaaa' }}>
             <span>(01) SELECT YOUR SECTOR</span>
             <span>Dedicated UK Industry Pages</span>
           </div>
@@ -122,20 +170,42 @@ export default function HomePage() {
               <Link
                 key={v.path}
                 href={v.path}
-                className="grid-card"
-                style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
+                style={{
+                  backgroundColor: '#111111',
+                  border: '1px solid #222222',
+                  borderRadius: '20px',
+                  padding: '2.2rem',
+                  textDecoration: 'none',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  transition: 'transform 0.3s ease, border-color 0.3s ease',
+                }}
               >
                 <div>
-                  <div className="card-num-pill">0{idx + 1}</div>
-                  <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#000000', marginBottom: '0.8rem' }}>
+                  <div
+                    style={{
+                      display: 'inline-block',
+                      padding: '0.3rem 0.8rem',
+                      backgroundColor: '#ffffff',
+                      color: '#000000',
+                      borderRadius: '9999px',
+                      fontSize: '0.8rem',
+                      fontWeight: 800,
+                      marginBottom: '1.2rem',
+                    }}
+                  >
+                    0{idx + 1}
+                  </div>
+                  <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#ffffff', marginBottom: '0.8rem' }}>
                     {v.name}
                   </h3>
-                  <p style={{ color: '#555555', fontSize: '0.92rem', lineHeight: 1.6, marginBottom: '1.8rem' }}>
+                  <p style={{ color: '#aaaaaa', fontSize: '0.92rem', lineHeight: 1.6, marginBottom: '1.8rem' }}>
                     {v.desc}
                   </p>
                 </div>
 
-                <div style={{ fontSize: '0.9rem', fontWeight: 800, color: '#000000', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                <div style={{ fontSize: '0.9rem', fontWeight: 800, color: '#ffffff', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                   View Dedicated Page <ArrowRight size={16} />
                 </div>
               </Link>
@@ -145,32 +215,40 @@ export default function HomePage() {
       </section>
 
       {/* REVENUE SIMULATOR SECTION */}
-      <section style={{ paddingBottom: 'clamp(3.5rem, 8vw, 6.5rem)' }}>
+      <section style={{ paddingBottom: 'clamp(4rem, 8vw, 7rem)' }}>
         <div className="container">
-          <div className="section-bar">
+          <div className="section-bar" style={{ borderColor: '#222222', color: '#aaaaaa' }}>
             <span>(02) REVENUE IMPACT</span>
             <span>Interactive Lead Simulator</span>
           </div>
 
-          <div style={{ backgroundColor: '#ffffff', border: '1px solid #e5e5e5', borderRadius: '24px', padding: 'clamp(1.75rem, 4vw, 3.5rem)', boxShadow: '0 8px 24px rgba(0, 0, 0, 0.04)' }}>
+          <div style={{ backgroundColor: '#111111', border: '1px solid #222222', borderRadius: '24px', padding: 'clamp(1.75rem, 4vw, 3.5rem)' }}>
             <div className="simulator-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
               <div>
-                <div className="soft-pill-tag" style={{ marginBottom: '1rem' }}>
+                <div
+                  className="soft-pill-tag"
+                  style={{
+                    marginBottom: '1rem',
+                    backgroundColor: '#181818',
+                    borderColor: '#333333',
+                    color: '#ffffff',
+                  }}
+                >
                   Estimate Revenue Growth
                 </div>
-                <h2 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.2rem)', fontWeight: 800, color: '#000000', letterSpacing: '-0.02em', marginBottom: '1rem' }}>
+                <h2 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.3rem)', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em', marginBottom: '1rem' }}>
                   Calculate Your Potential Organic Lead Value
                 </h2>
-                <p style={{ color: '#555555', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '2.5rem' }}>
+                <p style={{ color: '#aaaaaa', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '2.5rem' }}>
                   Adjust baseline traffic and customer contract value to model potential pipeline expansion.
                 </p>
 
                 {/* Sliders */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                   <div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.6rem', fontWeight: 700, fontSize: '0.9rem', color: '#000000' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.6rem', fontWeight: 700, fontSize: '0.9rem', color: '#ffffff' }}>
                       <span>MONTHLY ORGANIC TRAFFIC:</span>
-                      <span style={{ color: '#000000', fontWeight: 800 }}>{monthlyTraffic.toLocaleString()}</span>
+                      <span style={{ color: '#ffffff', fontWeight: 800 }}>{monthlyTraffic.toLocaleString()}</span>
                     </div>
                     <input
                       type="range"
@@ -179,14 +257,14 @@ export default function HomePage() {
                       step="5000"
                       value={monthlyTraffic}
                       onChange={(e) => setMonthlyTraffic(Number(e.target.value))}
-                      style={{ width: '100%', accentColor: '#000000', cursor: 'pointer' }}
+                      style={{ width: '100%', accentColor: '#ffffff', cursor: 'pointer' }}
                     />
                   </div>
 
                   <div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.6rem', fontWeight: 700, fontSize: '0.9rem', color: '#000000' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.6rem', fontWeight: 700, fontSize: '0.9rem', color: '#ffffff' }}>
                       <span>AVERAGE CLIENT / INSTRUCTION VALUE (£):</span>
-                      <span style={{ color: '#000000', fontWeight: 800 }}>£{avgCustomerValue.toLocaleString()}</span>
+                      <span style={{ color: '#ffffff', fontWeight: 800 }}>£{avgCustomerValue.toLocaleString()}</span>
                     </div>
                     <input
                       type="range"
@@ -195,15 +273,15 @@ export default function HomePage() {
                       step="100"
                       value={avgCustomerValue}
                       onChange={(e) => setAvgCustomerValue(Number(e.target.value))}
-                      style={{ width: '100%', accentColor: '#000000', cursor: 'pointer' }}
+                      style={{ width: '100%', accentColor: '#ffffff', cursor: 'pointer' }}
                     />
                   </div>
                 </div>
               </div>
 
               {/* Output Display */}
-              <div style={{ backgroundColor: '#000000', color: '#ffffff', borderRadius: '20px', padding: 'clamp(2rem, 4vw, 3rem)' }}>
-                <div style={{ fontSize: '0.85rem', fontWeight: 800, color: '#aaaaaa', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>
+              <div style={{ backgroundColor: '#000000', border: '1px solid #222222', color: '#ffffff', borderRadius: '20px', padding: 'clamp(2rem, 4vw, 3rem)' }}>
+                <div style={{ fontSize: '0.82rem', fontWeight: 800, color: '#aaaaaa', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>
                   PROJECTED ANNUAL REVENUE EXPANSION
                 </div>
                 <div style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', fontWeight: 900, color: '#ffffff', lineHeight: 1, marginBottom: '2rem' }}>
@@ -226,8 +304,8 @@ export default function HomePage() {
       </section>
 
       {/* EMBEDDED AI AUDIT SECTION */}
-      <section id="audit-section" style={{ paddingBottom: 'clamp(3.5rem, 8vw, 6.5rem)' }}>
-        <div className="container" style={{ maxWidth: '900px' }}>
+      <section id="audit-section" style={{ paddingBottom: 'clamp(4rem, 8vw, 7rem)' }}>
+        <div className="container" style={{ maxWidth: '920px' }}>
           <AIAuditWidget />
         </div>
       </section>
