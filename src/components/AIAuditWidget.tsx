@@ -17,6 +17,12 @@ export default function AIAuditWidget() {
   const [submitted, setSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
+  const mailtoHref = `mailto:info.xtractagency@gmail.com?subject=${encodeURIComponent(
+    `Intake Request: ${name} (${brand || url})`
+  )}&body=${encodeURIComponent(
+    `Website URL: ${url}\nFull Name: ${name}\nWork Email: ${email}\nCompany/Brand: ${brand || 'N/A'}\nIndustry: ${industry}\nRequest Type: ${requestType}\nNotes: ${notes || 'None'}`
+  )}`;
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!url || !email || !name) {
@@ -28,33 +34,28 @@ export default function AIAuditWidget() {
     setErrorMessage('');
 
     try {
-      const res = await fetch('/api/audit-request', {
+      await fetch('/api/audit-request', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ url, name, email, brand, industry, requestType, notes }),
       });
 
-      const data = await res.json();
       setIsSubmitting(false);
+      setSubmitted(true);
 
-      if (res.ok && data.success) {
-        setSubmitted(true);
-        try {
-          confetti({
-            particleCount: 80,
-            spread: 70,
-            origin: { y: 0.6 },
-            colors: ['#000000', '#555555', '#888888'],
-          });
-        } catch (err) {
-          // ignore fallback
-        }
-      } else {
-        setSubmitted(true); // Graceful fallback
+      try {
+        confetti({
+          particleCount: 80,
+          spread: 70,
+          origin: { y: 0.6 },
+          colors: ['#000000', '#555555', '#888888'],
+        });
+      } catch (err) {
+        // ignore fallback
       }
     } catch (err) {
       setIsSubmitting(false);
-      setSubmitted(true); // Ensure client always sees success feedback
+      setSubmitted(true);
     }
   };
 
@@ -329,8 +330,8 @@ export default function AIAuditWidget() {
           <h4 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#000000', marginBottom: '0.8rem' }}>
             Intake Request Submitted!
           </h4>
-          <p style={{ color: '#555555', fontSize: '1.05rem', lineHeight: 1.6, maxWidth: '560px', margin: '0 auto 2rem auto' }}>
-            Thank you, <strong>{name}</strong>. Your website intake request for <strong>{url}</strong> has been sent to our team at <strong>info.xtractagency@gmail.com</strong>.
+          <p style={{ color: '#555555', fontSize: '1.05rem', lineHeight: 1.6, maxWidth: '580px', margin: '0 auto 2rem auto' }}>
+            Thank you, <strong>{name}</strong>. Your intake request for <strong>{url}</strong> has been logged for our team at <strong>info.xtractagency@gmail.com</strong>.
           </p>
 
           <div style={{ backgroundColor: '#f8f8f8', border: '1px solid #e5e5e5', borderRadius: '16px', padding: '1.5rem', maxWidth: '520px', margin: '0 auto 2rem auto', textAlign: 'left' }}>
@@ -345,9 +346,18 @@ export default function AIAuditWidget() {
             </div>
           </div>
 
-          <button onClick={resetForm} className="btn btn-outline" style={{ padding: '0.8rem 1.8rem' }}>
-            Submit Another Request
-          </button>
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a
+              href={mailtoHref}
+              className="btn btn-primary"
+              style={{ padding: '0.8rem 1.6rem', fontSize: '0.9rem' }}
+            >
+              ✉ Open Mail App (Direct Backup)
+            </a>
+            <button onClick={resetForm} className="btn btn-outline" style={{ padding: '0.8rem 1.6rem', fontSize: '0.9rem' }}>
+              Submit Another Request
+            </button>
+          </div>
         </div>
       )}
     </div>

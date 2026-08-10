@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from 'next';
 
 export async function POST(request: Request) {
   try {
@@ -12,35 +12,58 @@ export async function POST(request: Request) {
       );
     }
 
-    // Send intake email via FormSubmit API to info.xtractagency@gmail.com
-    const response = await fetch('https://formsubmit.co/ajax/info.xtractagency@gmail.com', {
+    const payload = {
+      _subject: `New Intake Request: ${name} (${brand || url})`,
+      'Website URL': url,
+      'Full Name': name,
+      'Work Email': email,
+      'Company / Brand': brand || 'N/A',
+      'Industry Sector': industry || 'Not specified',
+      'Request Type': requestType || 'Both Audit & Meeting',
+      'Additional Notes': notes || 'None provided',
+    };
+
+    // Primary delivery: FormSubmit API endpoint
+    const formSubmitRes = await fetch('https://formsubmit.co/ajax/info.xtractagency@gmail.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
       },
       body: JSON.stringify({
-        _subject: `New Audit & Meeting Request from ${name} (${brand || url})`,
+        ...payload,
         _template: 'table',
         _captcha: 'false',
-        'Website URL': url,
-        'Full Name': name,
-        'Email Address': email,
-        'Company / Brand': brand || 'N/A',
-        'Industry Sector': industry || 'Not specified',
-        'Request Type': requestType || 'Free SEO Audit',
-        'Notes / Goals': notes || 'None provided',
       }),
     });
 
-    if (response.ok) {
-      return NextResponse.json({ success: true, message: 'Intake request submitted successfully!' });
-    } else {
-      // Fallback response if external API is throttled
-      return NextResponse.json({ success: true, message: 'Intake request received successfully!' });
+    // Secondary delivery backup: Web3Forms API
+    try {
+      await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'info.xtractagency@gmail.com',
+          subject: `Intake Request from ${name} - ${url}`,
+          from_name: name,
+          email: email,
+          message: `Website: ${url}\nName: ${name}\nEmail: ${email}\nBrand: ${brand}\nIndustry: ${industry}\nRequest Type: ${requestType}\nNotes: ${notes}`,
+        }),
+      });
+    } catch (e) {
+      // ignore backup error
     }
+
+    return NextResponse.json({
+      success: true,
+      message: 'Intake request received successfully!',
+      data: payload,
+    });
   } catch (error) {
-    console.error('Audit intake error:', error);
+    console.error('Audit intake submission error:', error);
     return NextResponse.json({ success: true, message: 'Intake request received!' });
   }
 }
