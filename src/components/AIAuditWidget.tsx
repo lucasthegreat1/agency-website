@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Search, Send, CheckCircle } from '@/components/Icons';
+import confetti from 'canvas-confetti';
 
 export default function AIAuditWidget() {
   const [url, setUrl] = useState('');
@@ -24,10 +25,31 @@ export default function AIAuditWidget() {
   }, []);
 
   const mailtoHref = `mailto:info.xtractagency@gmail.com?subject=${encodeURIComponent(
-    `Intake Request: ${name || 'New Client'} (${brand || url || 'Website'})`
+    `SEO Audit Request: ${name || 'New Client'} (${brand || url || 'Website'})`
   )}&body=${encodeURIComponent(
-    `Website URL: ${url}\nFull Name: ${name}\nWork Email: ${email}\nCompany/Brand: ${brand || 'N/A'}\nIndustry: ${industry}\nRequest Type: ${requestType}\nNotes: ${notes || 'None'}`
+    `NEW INTAKE REQUEST DETAILS:\n-----------------------------\nWebsite URL: ${url}\nFull Name: ${name}\nWork Email: ${email}\nCompany/Brand: ${brand || 'N/A'}\nIndustry Sector: ${industry}\nRequest Type: ${requestType}\nAdditional Notes: ${notes || 'None'}`
   )}`;
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitted(true);
+
+    try {
+      confetti({
+        particleCount: 80,
+        spread: 70,
+        origin: { y: 0.6 },
+        colors: ['#000000', '#555555', '#888888'],
+      });
+    } catch (err) {
+      // ignore fallback
+    }
+
+    // Auto-launch client's email application pre-filled with all details to info.xtractagency@gmail.com
+    setTimeout(() => {
+      window.location.href = mailtoHref;
+    }, 400);
+  };
 
   return (
     <div
@@ -52,22 +74,14 @@ export default function AIAuditWidget() {
             Request a Free Website Audit or Meeting
           </h3>
           <p style={{ color: '#555555', fontSize: '0.98rem', marginBottom: '2.2rem', lineHeight: 1.6, maxWidth: '680px' }}>
-            Enter your domain and details below. Our search specialists will review your website performance, identify ranking roadblocks, and email your audit directly to your inbox.
+            Enter your domain and details below. Submitting will send your request straight to <strong>info.xtractagency@gmail.com</strong>.
           </p>
 
           <form
-            action="https://formsubmit.co/info.xtractagency@gmail.com"
-            method="POST"
+            onSubmit={handleSubmit}
             className="audit-form-grid"
             style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.2rem' }}
           >
-            {/* FormSubmit Configuration Settings */}
-            <input type="hidden" name="_subject" value="New SEO Audit Request from tryxtract.co.uk" />
-            <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_next" value="https://tryxtract.co.uk/?submitted=true#audit" />
-            <input type="hidden" name="Request Type" value={requestType} />
-
             {/* Website URL */}
             <div style={{ gridColumn: 'span 2' }} className="full-width-col">
               <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 800, color: '#000000', letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
@@ -76,7 +90,6 @@ export default function AIAuditWidget() {
               <div style={{ position: 'relative' }}>
                 <input
                   type="text"
-                  name="Website URL"
                   required
                   placeholder="e.g. yourcompany.co.uk"
                   value={url}
@@ -104,7 +117,6 @@ export default function AIAuditWidget() {
               </label>
               <input
                 type="text"
-                name="Full Name"
                 required
                 placeholder="e.g. Sarah Jenkins"
                 value={name}
@@ -129,7 +141,6 @@ export default function AIAuditWidget() {
               </label>
               <input
                 type="email"
-                name="Email Address"
                 required
                 placeholder="e.g. sarah@company.co.uk"
                 value={email}
@@ -154,7 +165,6 @@ export default function AIAuditWidget() {
               </label>
               <input
                 type="text"
-                name="Company Name"
                 placeholder="e.g. Jenkins Legal Ltd"
                 value={brand}
                 onChange={(e) => setBrand(e.target.value)}
@@ -177,7 +187,6 @@ export default function AIAuditWidget() {
                 INDUSTRY SECTOR
               </label>
               <select
-                name="Industry Sector"
                 value={industry}
                 onChange={(e) => setIndustry(e.target.value)}
                 style={{
@@ -240,7 +249,6 @@ export default function AIAuditWidget() {
                 ADDITIONAL NOTES / SPECIFIC GOALS (OPTIONAL)
               </label>
               <textarea
-                name="Additional Notes"
                 rows={3}
                 placeholder="Tell us about your main competitors or search targets..."
                 value={notes}
@@ -268,7 +276,7 @@ export default function AIAuditWidget() {
                 style={{ width: '100%', padding: '1.1rem', fontSize: '1rem' }}
               >
                 <span style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                  Submit Request to info.xtractagency@gmail.com <Send size={18} />
+                  Send Request to info.xtractagency@gmail.com <Send size={18} />
                 </span>
               </button>
             </div>
@@ -294,21 +302,35 @@ export default function AIAuditWidget() {
           </div>
 
           <h4 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#000000', marginBottom: '0.8rem' }}>
-            Intake Request Submitted!
+            Intake Request Pre-filled & Ready!
           </h4>
           <p style={{ color: '#555555', fontSize: '1.05rem', lineHeight: 1.6, maxWidth: '580px', margin: '0 auto 2rem auto' }}>
-            Thank you! Your intake request has been submitted directly to <strong>info.xtractagency@gmail.com</strong>.
+            Your email app has been opened with your intake details ready to send to <strong>info.xtractagency@gmail.com</strong>.
           </p>
+
+          <div style={{ backgroundColor: '#f8f8f8', border: '1px solid #e5e5e5', borderRadius: '16px', padding: '1.5rem', maxWidth: '520px', margin: '0 auto 2rem auto', textAlign: 'left' }}>
+            <div style={{ fontSize: '0.82rem', fontWeight: 800, color: '#666666', textTransform: 'uppercase', marginBottom: '0.8rem' }}>
+              INTAKE DETAILS
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.92rem', color: '#000000' }}>
+              <div><strong>Target Domain:</strong> {url}</div>
+              <div><strong>Full Name:</strong> {name}</div>
+              <div><strong>Contact Email:</strong> {email}</div>
+              <div><strong>Company:</strong> {brand || 'N/A'}</div>
+              <div><strong>Industry:</strong> {industry}</div>
+              <div><strong>Request Type:</strong> {requestType}</div>
+            </div>
+          </div>
 
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a
               href={mailtoHref}
               className="btn btn-primary"
-              style={{ padding: '0.8rem 1.6rem', fontSize: '0.9rem' }}
+              style={{ padding: '0.9rem 2rem', fontSize: '0.95rem' }}
             >
-              ✉ Send Direct Email Backup
+              ✉ Click Here to Send Email Now
             </a>
-            <button onClick={() => setSubmitted(false)} className="btn btn-outline" style={{ padding: '0.8rem 1.6rem', fontSize: '0.9rem' }}>
+            <button onClick={() => setSubmitted(false)} className="btn btn-outline" style={{ padding: '0.9rem 1.8rem', fontSize: '0.95rem' }}>
               Submit Another Request
             </button>
           </div>
