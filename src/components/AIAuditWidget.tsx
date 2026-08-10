@@ -100,7 +100,18 @@ export default function AIAuditWidget() {
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="audit-form-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.2rem' }}>
+          <form
+            onSubmit={handleSubmit}
+            name="audit-intake"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            className="audit-form-grid"
+            style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.2rem' }}
+          >
+            <input type="hidden" name="form-name" value="audit-intake" />
+            <p style={{ display: 'none' }}>
+              <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+            </p>
             {/* Website URL */}
             <div style={{ gridColumn: 'span 2' }} className="full-width-col">
               <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 800, color: '#000000', letterSpacing: '0.04em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
