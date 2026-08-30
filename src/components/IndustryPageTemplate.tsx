@@ -28,6 +28,12 @@ export type UKIndustrySpec = {
     intro: string;
     trades: { name: string; desc: string }[];
   };
+  whoWeServeSection?: {
+    sectionLabel: string;
+    title: string;
+    body: string;
+    bullets: string[];
+  };
   aiSearchSection?: {
     h2: string;
     content: string;
@@ -114,6 +120,38 @@ export default function IndustryPageTemplate({ spec }: { spec: UKIndustrySpec })
           </div>
         </div>
       </section>
+
+      {/* WHO WE SERVE SECTION */}
+      {spec.whoWeServeSection && (
+        <section style={{ marginBottom: '6rem' }}>
+          <div className="container">
+            <div className="section-bar" style={{ borderColor: '#222222', color: '#aaaaaa' }}>
+              <span>{spec.whoWeServeSection.sectionLabel}</span>
+              <span>Healthcare Sectors</span>
+            </div>
+
+            <div style={{ backgroundColor: '#111111', border: '1px solid #222222', borderRadius: '24px', padding: '3.5rem', boxShadow: '0 8px 24px rgba(0, 0, 0, 0.4)' }}>
+              <h2 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em', marginBottom: '1rem' }}>
+                {spec.whoWeServeSection.title}
+              </h2>
+              <p style={{ color: '#aaaaaa', fontSize: '1.05rem', lineHeight: 1.65, maxWidth: '820px', marginBottom: '2.5rem' }}>
+                {spec.whoWeServeSection.body}
+              </p>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem' }}>
+                {spec.whoWeServeSection.bullets.map((bullet, idx) => (
+                  <div key={idx} style={{ backgroundColor: '#181818', border: '1px solid #222222', borderRadius: '16px', padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                    <div style={{ width: '22px', height: '22px', borderRadius: '50%', backgroundColor: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#000000', flexShrink: 0, fontSize: '0.75rem', fontWeight: 900 }}>
+                      ✓
+                    </div>
+                    <span style={{ fontSize: '0.98rem', fontWeight: 700, color: '#ffffff' }}>{bullet}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* TRADES WE WORK WITH SECTION */}
       {spec.tradesSection && (
