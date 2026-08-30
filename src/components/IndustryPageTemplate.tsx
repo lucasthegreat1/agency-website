@@ -19,8 +19,14 @@ export type UKIndustrySpec = {
     caseStudyTitle: string;
     caseStudyContent: string;
     caseStudyResult: string;
+    caseStudySupportingExample?: string;
     retainerTitle: string;
     retainerItems: string[];
+  };
+  tradesSection?: {
+    title: string;
+    intro: string;
+    trades: { name: string; desc: string }[];
   };
   aiSearchSection?: {
     h2: string;
@@ -109,6 +115,40 @@ export default function IndustryPageTemplate({ spec }: { spec: UKIndustrySpec })
         </div>
       </section>
 
+      {/* TRADES WE WORK WITH SECTION */}
+      {spec.tradesSection && (
+        <section style={{ marginBottom: '6rem' }}>
+          <div className="container">
+            <div className="section-bar" style={{ borderColor: '#222222', color: '#aaaaaa' }}>
+              <span>SPECIALIST TRADES TARGETED</span>
+              <span>Home Improvement Sectors</span>
+            </div>
+
+            <div style={{ backgroundColor: '#111111', border: '1px solid #222222', borderRadius: '24px', padding: '3.5rem', boxShadow: '0 8px 24px rgba(0, 0, 0, 0.4)' }}>
+              <h2 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em', marginBottom: '1rem' }}>
+                {spec.tradesSection.title}
+              </h2>
+              <p style={{ color: '#aaaaaa', fontSize: '1.05rem', lineHeight: 1.65, maxWidth: '820px', marginBottom: '2.5rem' }}>
+                {spec.tradesSection.intro}
+              </p>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+                {spec.tradesSection.trades.map((t, idx) => (
+                  <div key={idx} style={{ backgroundColor: '#181818', border: '1px solid #222222', borderRadius: '16px', padding: '1.5rem' }}>
+                    <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#ffffff', marginBottom: '0.5rem' }}>
+                      {t.name}
+                    </div>
+                    <div style={{ color: '#aaaaaa', fontSize: '0.92rem', lineHeight: 1.6 }}>
+                      {t.desc}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* H2 OUTLINE SECTION 2 */}
       <section style={{ marginBottom: '6rem' }}>
         <div className="container">
@@ -158,9 +198,20 @@ export default function IndustryPageTemplate({ spec }: { spec: UKIndustrySpec })
             <div style={{ fontSize: '3.2rem', fontWeight: 900, color: '#ffffff', marginBottom: '1.5rem', lineHeight: 1 }}>
               {spec.h2Outline.caseStudyResult}
             </div>
-            <p style={{ color: '#cccccc', fontSize: '1.05rem', lineHeight: 1.65, maxWidth: '800px' }}>
+            <p style={{ color: '#cccccc', fontSize: '1.05rem', lineHeight: 1.65, maxWidth: '800px', marginBottom: spec.h2Outline.caseStudySupportingExample ? '1.8rem' : '0' }}>
               {spec.h2Outline.caseStudyContent}
             </p>
+
+            {spec.h2Outline.caseStudySupportingExample && (
+              <div style={{ backgroundColor: '#181818', borderLeft: '4px solid #ffffff', border: '1px solid #222222', borderLeftWidth: '4px', borderRadius: '16px', padding: '1.5rem 1.8rem' }}>
+                <div style={{ fontSize: '0.82rem', fontWeight: 800, color: '#ffffff', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+                  CLADDING & RECENT PROOF POINT EXAMPLE
+                </div>
+                <p style={{ color: '#cccccc', fontSize: '1.02rem', lineHeight: 1.65, margin: 0 }}>
+                  {spec.h2Outline.caseStudySupportingExample}
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </section>
