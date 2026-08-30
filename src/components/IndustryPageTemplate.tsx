@@ -32,8 +32,10 @@ export type UKIndustrySpec = {
     sectionLabel: string;
     title: string;
     body: string;
-    bullets: string[];
+    bullets?: string[];
   };
+  seoTeamText?: string;
+  contentWritersText?: string;
   aiSearchSection?: {
     h2: string;
     content: string;
@@ -138,16 +140,18 @@ export default function IndustryPageTemplate({ spec }: { spec: UKIndustrySpec })
                 {spec.whoWeServeSection.body}
               </p>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem' }}>
-                {spec.whoWeServeSection.bullets.map((bullet, idx) => (
-                  <div key={idx} style={{ backgroundColor: '#181818', border: '1px solid #222222', borderRadius: '16px', padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                    <div style={{ width: '22px', height: '22px', borderRadius: '50%', backgroundColor: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#000000', flexShrink: 0, fontSize: '0.75rem', fontWeight: 900 }}>
-                      ✓
+              {spec.whoWeServeSection.bullets && spec.whoWeServeSection.bullets.length > 0 && (
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem' }}>
+                  {spec.whoWeServeSection.bullets.map((bullet, idx) => (
+                    <div key={idx} style={{ backgroundColor: '#181818', border: '1px solid #222222', borderRadius: '16px', padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                      <div style={{ width: '22px', height: '22px', borderRadius: '50%', backgroundColor: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#000000', flexShrink: 0, fontSize: '0.75rem', fontWeight: 900 }}>
+                        ✓
+                      </div>
+                      <span style={{ fontSize: '0.98rem', fontWeight: 700, color: '#ffffff' }}>{bullet}</span>
                     </div>
-                    <span style={{ fontSize: '0.98rem', fontWeight: 700, color: '#ffffff' }}>{bullet}</span>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </section>
@@ -214,7 +218,11 @@ export default function IndustryPageTemplate({ spec }: { spec: UKIndustrySpec })
             <span>Step-by-Step Methodology</span>
           </div>
 
-          <SeoGeoProcessTimeline industryName={spec.tag} />
+          <SeoGeoProcessTimeline
+            industryName={spec.tag}
+            seoTeamText={spec.seoTeamText}
+            contentWritersText={spec.contentWritersText}
+          />
         </div>
       </section>
 

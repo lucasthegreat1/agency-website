@@ -2,14 +2,22 @@
 
 import React from 'react';
 
-export default function SeoGeoProcessTimeline({ industryName }: { industryName?: string }) {
+export default function SeoGeoProcessTimeline({
+  industryName,
+  seoTeamText,
+  contentWritersText,
+}: {
+  industryName?: string;
+  seoTeamText?: string;
+  contentWritersText?: string;
+}) {
   const steps = [
     {
       num: '01',
       title: 'CONDUCT KEYWORD RESEARCH',
       side: 'left',
       description:
-        `We begin by conducting keyword research and keyword mapping. Our SEO team will discuss potential topics you may want to avoid, and get to work on creating a detailed content plan based on keywords that:`,
+        `We begin by conducting keyword research and keyword mapping. ${seoTeamText || 'Our SEO team'} will discuss potential topics you may want to avoid, and get to work on creating a detailed content plan based on keywords that:`,
       bullets: [
         `Align with your ${industryName || 'business'} requirements`,
         'Are relevant to what is already appearing in the SERPs',
@@ -29,7 +37,7 @@ export default function SeoGeoProcessTimeline({ industryName }: { industryName?:
         'Authoritative industry articles',
       ],
       extraText:
-        'Our content writers have experience writing within this sector and will produce expert content that builds topical authority and trust with your target audience.',
+        `${contentWritersText || 'Our content writers have experience writing within this sector'} and will produce expert content that builds topical authority and trust with your target audience.`,
     },
     {
       num: '03',

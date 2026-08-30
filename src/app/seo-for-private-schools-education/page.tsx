@@ -2,11 +2,13 @@ import { Metadata } from 'next';
 import IndustryPageTemplate, { UKIndustrySpec } from '@/components/IndustryPageTemplate';
 
 export const metadata: Metadata = {
-  title: 'SEO for Private Schools & Education Providers | UK',
-  description: 'Get in front of parents researching schools and tutors months before enrolment. SEO for UK private education. Free audit.',
+  title: 'SEO for Private Schools & Education Providers | UK Education SEO Agency',
+  description:
+    "UK's specialist education SEO agency — get in front of parents researching schools and tutors months before enrolment. Free audit.",
   openGraph: {
-    title: 'SEO for Private Schools & Education Providers | UK',
-    description: 'Get in front of parents researching schools and tutors months before enrolment. SEO for UK private education. Free audit.',
+    title: 'SEO for Private Schools & Education Providers | UK Education SEO Agency',
+    description:
+      "UK's specialist education SEO agency — get in front of parents researching schools and tutors months before enrolment. Free audit.",
     type: 'website',
   },
 };
@@ -14,18 +16,31 @@ export const metadata: Metadata = {
 const spec: UKIndustrySpec = {
   tag: 'PRIVATE EDUCATION SEO UK',
   h1: 'SEO for private schools and education providers that builds enrolment pipeline early',
-  metaTitle: 'SEO for Private Schools & Education Providers | UK',
-  metaDescription: 'Get in front of parents researching schools and tutors months before enrolment. SEO for UK private education. Free audit.',
+  metaTitle: 'SEO for Private Schools & Education Providers | UK Education SEO Agency',
+  metaDescription:
+    "UK's specialist education SEO agency — get in front of parents researching schools and tutors months before enrolment. Free audit.",
   schemaType: 'EducationalOrganization',
-  metaNotesNotice: 'Annual enrolment cycle runway alignment. Focus on long-lead parent research content, open day landing pages, regional comparison guides, and curriculum authority.',
+  metaNotesNotice:
+    'Annual enrolment cycle runway alignment. Focus on long-lead parent research content, open day landing pages, regional comparison guides, and curriculum authority.',
+  whoWeServeSection: {
+    sectionLabel: '(01.5) WHY XTRACT — A SPECIALIST EDUCATION SEO AGENCY',
+    title: 'Not a generalist agency — a dedicated education SEO agency',
+    body: "We work exclusively with independent schools, prep schools, and education providers across the UK. As a specialist school SEO agency, we understand ISI inspection cycles, open day timelines, and the 12-18 month parent research journey in a way generalist agencies don't — so your content is built for how parents actually search, not a generic template.",
+  },
+  seoTeamText: 'Our education SEO agency team',
+  contentWritersText:
+    'As a specialist education SEO agency, our content writers have experience writing within this sector',
   h2Outline: {
     section1Title: 'Why enrolment SEO needs a longer runway than most agencies plan for',
-    section1Content: 'Parents researching independent schools, prep schools, or selective tutoring services begin their decision-making process 12 to 18 months before registration deadlines. Campaigns must engage parents early in their research journey long before open day events.',
+    section1Content:
+      'Parents researching independent schools, prep schools, or selective tutoring services begin their decision-making process 12 to 18 months before registration deadlines. Campaigns must engage parents early in their research journey long before open day events.',
     section2Title: 'Ranking through the parent research journey (open days, comparisons, reviews)',
-    section2Content: 'We structure strategic content hubs targeting parent queries around curriculum choice (IB vs A-Levels), ISI inspection report breakdowns, regional school comparison searches, and key entry assessment preparation.',
+    section2Content:
+      'We structure strategic content hubs targeting parent queries around curriculum choice (IB vs A-Levels), ISI inspection report breakdowns, regional school comparison searches, and key entry assessment preparation.',
     caseStudyTitle: 'Case study: UK Independent Prep & Senior School Results',
     caseStudyResult: '+180% Increase in Open Day Registrations',
-    caseStudyContent: 'By establishing regional parent research silos and EducationalOrganization JSON-LD schema, an independent UK school group filled its prospective open day events 6 months ahead of registration deadlines.',
+    caseStudyContent:
+      'By establishing regional parent research silos and EducationalOrganization JSON-LD schema, an independent UK school group filled its prospective open day events 6 months ahead of registration deadlines.',
     retainerTitle: "What's included in your retainer",
     retainerItems: [
       'Open Day & Campus Visit Landing Page SEO',
@@ -39,7 +54,8 @@ const spec: UKIndustrySpec = {
   },
   aiSearchSection: {
     h2: 'Built for how people search now — including AI',
-    content: 'Parents are starting to ask AI tools things like "best private schools in Surrey" or "is private school worth it after the fee changes" before they browse individual school websites. We make sure your school\'s information is structured so these tools can find and cite it accurately.',
+    content:
+      'Parents are starting to ask AI tools things like "best private schools in Surrey" or "is private school worth it after the fee changes" before they browse individual school websites. We make sure your school\'s information is structured so these tools can find and cite it accurately.',
   },
   faqs: [
     {
@@ -57,6 +73,14 @@ const spec: UKIndustrySpec = {
     {
       q: 'Can SEO support both day schools and international boarding enquiries?',
       a: 'Yes. We build multi-region campaign structures that target local UK parents for day school entry while optimizing international landing pages for overseas family placement.',
+    },
+    {
+      q: 'What makes you different from a generalist SEO agency?',
+      a: "We're a specialist education SEO agency — we only work with schools and education providers, so we understand curriculum comparisons, ISI reporting, and the parent research timeline without needing to be briefed on the basics.",
+    },
+    {
+      q: 'Do you work with independent schools across all regions of the UK?',
+      a: 'Yes — as a UK-wide school SEO agency, we build regional comparison content and location-specific landing pages so your school ranks for parents searching in your catchment area and beyond.',
     },
   ],
 };
