@@ -18,6 +18,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
+      url: `${baseUrl}/resources/is-your-clinic-invisible-in-chatgpt-private-healthcare`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/resources/geo-agency-for-law-firms`,
       lastModified: currentDate,
       changeFrequency: 'weekly',

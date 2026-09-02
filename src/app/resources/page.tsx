@@ -27,6 +27,14 @@ export default function ResourcesPage() {
 
   const articles = [
     {
+      title: 'Is Your Clinic Invisible in ChatGPT? A Quick Guide for Private Healthcare Providers',
+      path: '/resources/is-your-clinic-invisible-in-chatgpt-private-healthcare',
+      summary:
+        'Find out why private clinics & hospitals are invisible in ChatGPT, Gemini & AI search answers — and how to fix it with a 5-minute self-check.',
+      readTime: '6 min read',
+      tag: 'PRIVATE HEALTHCARE & AI SEARCH',
+    },
+    {
       title: 'GEO Agency for Law Firms: Improve Your Visibility Across AI Search',
       path: '/resources/geo-agency-for-law-firms',
       summary:
