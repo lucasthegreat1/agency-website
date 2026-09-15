@@ -27,12 +27,12 @@ export default function ResourcesPage() {
 
   const articles = [
     {
-      title: "Reputation Management for Private Healthcare Clinics: Why Dental and Cosmetic Practices Can't Afford to Ignore It",
+      title: "Reputation Management for Cosmetic & Aesthetic Clinics: Why Cosmetic Practices Can't Afford to Ignore It",
       path: '/resources/reputation-management-private-healthcare-clinics',
       summary:
-        'Which private healthcare clinics need reputation and review management most, and how it works alongside SEO to fill appointment books.',
-      readTime: '7 min read',
-      tag: 'PRIVATE HEALTHCARE & REPUTATION',
+        'Why cosmetic surgery & aesthetic clinics need reputation and review management most, and how it works alongside SEO to fill consultation books.',
+      readTime: '8 min read',
+      tag: 'COSMETIC & AESTHETIC REPUTATION',
     },
     {
       title: 'Is Your Clinic Invisible in ChatGPT? A Quick Guide for Private Healthcare Providers',
