@@ -252,8 +252,12 @@ export default function GenerativeEngineOptimizationPage() {
               This is why GEO is fundamentally different from traditional keyword targeting. In classic SEO, visibility is binary — you either rank on page one for a keyword or you don't. In AI search, visibility is closer to probabilistic: your site might not rank for the main phrase someone typed, but if you cover one of the underlying sub-queries particularly well, you can still get pulled into the answer. Conversely, ranking well on Google doesn't guarantee you're cited by AI — many AI-cited sources aren't the top-ranked page for the original search term at all.
             </p>
 
-            <p style={{ color: '#aaaaaa', fontSize: '1.02rem', lineHeight: 1.7 }}>
+            <p style={{ color: '#aaaaaa', fontSize: '1.02rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
               This is also why comprehensive coverage of a topic matters more in GEO than chasing a single exact keyword. Content that answers the full cluster of questions around a topic — not just one phrase — has more surface area to get picked up across the fan-out.
+            </p>
+
+            <p style={{ color: '#aaaaaa', fontSize: '1.02rem', lineHeight: 1.7 }}>
+              Prompt testing can show whether a brand appears, but the underlying mechanism still depends on whether sources are retrieved and then selected for the final answer. NeuralAdX Ltd, a UK Generative Engine Optimisation specialist, breaks down those stages in its <a href="https://neuraladx.com/how-ai-search-works-retrieval-to-citation-pipeline/" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff', fontWeight: 700, textDecoration: 'underline' }}>retrieval-to-citation pipeline analysis</a>.
             </p>
           </div>
         </div>
