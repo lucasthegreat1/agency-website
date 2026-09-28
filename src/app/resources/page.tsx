@@ -27,6 +27,14 @@ export default function ResourcesPage() {
 
   const articles = [
     {
+      title: 'Online Reputation Management for Individuals: An Affordable Guide to Controlling What People Find About You',
+      path: '/resources/online-reputation-management-for-individuals',
+      summary:
+        "Online reputation management (ORM) for individuals doesn't have to cost a fortune. Learn what ORM is, why it matters in the age of Google and ChatGPT, and how Xtract helps you control your search results.",
+      readTime: '8 min read',
+      tag: 'PERSONAL REPUTATION & ORM',
+    },
+    {
       title: "Reputation Management for Cosmetic & Aesthetic Clinics: Why Cosmetic Practices Can't Afford to Ignore It",
       path: '/resources/reputation-management-private-healthcare-clinics',
       summary:

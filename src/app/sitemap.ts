@@ -18,6 +18,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
+      url: `${baseUrl}/resources/online-reputation-management-for-individuals`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/resources/reputation-management-private-healthcare-clinics`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
